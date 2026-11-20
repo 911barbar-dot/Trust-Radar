@@ -1,0 +1,45 @@
+name: Trust Radar Scanner
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # alle 15 Minuten
+  workflow_dispatch:          # manuell starten moeglich
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scanner
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests
+
+      - name: Scan
+        env:
+          CMC_API_KEY: ${{ secrets.CMC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MIN_LIQUIDITY_USD: ${{ vars.MIN_LIQUIDITY_USD || '40000' }}
+          MIN_VOLUME_24H_USD: ${{ vars.MIN_VOLUME_24H_USD || '100000' }}
+          MIN_MARKETCAP_USD: ${{ vars.MIN_MARKETCAP_USD || '400000' }}
+          SOURCES: ${{ vars.SOURCES || 'cmc,fourmeme' }}
+          WATCH_HOURS: ${{ vars.WATCH_HOURS || '24' }}
+        run: python scanner.py
+
+      - name: Daten speichern
+        run: |
+          git config user.name "scanner-bot"
+          git config user.email "scanner-bot@users.noreply.github.com"
+          git add state.json docs/data.json
+          git diff --cached --quiet || git commit -m "Scan $(date -u +%Y-%m-%dT%H:%M)"
+          git push

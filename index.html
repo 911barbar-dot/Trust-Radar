@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trust Radar</title>
+<style>
+  :root{--bg:#0b0f14;--card:#131a22;--line:#1f2a36;--txt:#e6edf3;--mut:#8b98a5;--acc:#3b82f6;--ok:#22c55e;--bad:#ef4444;--warn:#f59e0b}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--txt);font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif}
+  header{padding:22px 18px 8px;max-width:960px;margin:auto}
+  h1{margin:0;font-size:22px;letter-spacing:-.3px}
+  .sub{color:var(--mut);font-size:13px;margin-top:4px}
+  .bar{display:flex;gap:8px;flex-wrap:wrap;padding:12px 18px;max-width:960px;margin:auto;position:sticky;top:0;background:var(--bg);z-index:2;border-bottom:1px solid var(--line)}
+  select,button{background:var(--card);color:var(--txt);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font:inherit;font-size:14px}
+  button.on{background:var(--acc);border-color:var(--acc)}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:960px;margin:12px auto 0;padding:0 18px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+  .stat b{display:block;font-size:20px}
+  .stat span{color:var(--mut);font-size:12px}
+  main{max-width:960px;margin:auto;padding:12px 18px 40px;display:grid;gap:10px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center}
+  .card.hot{border-color:var(--ok);box-shadow:0 0 0 1px rgba(34,197,94,.25)}
+  .ava{width:44px;height:44px;border-radius:50%;background:#1b2531;display:grid;place-items:center;font-size:12px;font-weight:700;color:var(--mut)}
+  .name{font-weight:600}
+  .meta{color:var(--mut);font-size:12.5px}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+  .tag{font-size:11.5px;padding:2px 8px;border-radius:99px;background:#1b2531;color:var(--mut)}
+  .tag.ok{background:rgba(34,197,94,.15);color:var(--ok)}
+  .tag.warn{background:rgba(245,158,11,.15);color:var(--warn)}
+  .score{text-align:center;min-width:56px}
+  .score b{display:block;font-size:22px}
+  .score span{font-size:11px;color:var(--mut)}
+  .nums{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;font-size:12.5px}
+  .nums div{background:#0f151c;border-radius:8px;padding:6px 8px}
+  .nums small{display:block;color:var(--mut);font-size:11px}
+  .links{grid-column:1/-1;display:flex;gap:14px;font-size:13px}
+  a{color:var(--acc);text-decoration:none}
+  .up{color:var(--ok)} .down{color:var(--bad)}
+  .empty{color:var(--mut);text-align:center;padding:40px 0}
+  footer{color:var(--mut);font-size:12px;text-align:center;padding:0 18px 30px}
+  @media(max-width:520px){.nums{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header>
+  <h1>📡 Trust Radar</h1>
+  <div class="sub" id="updated">Lade Daten...</div>
+</header>
+<div class="stats">
+  <div class="stat"><b id="s-total">0</b><span>Neue Coins</span></div>
+  <div class="stat"><b id="s-hot">0</b><span>Durchbrüche</span></div>
+  <div class="stat"><b id="s-24">0</b><span>Letzte 24h</span></div>
+</div>
+<div class="bar">
+  <button id="f-hot">Nur Durchbrüche</button>
+  <select id="f-src"><option value="">Alle Quellen</option><option>CoinMarketCap</option><option>Four.Meme</option></select>
+  <select id="f-chain"><option value="">Alle Chains</option></select>
+  <select id="f-sort"><option value="date">Neueste zuerst</option><option value="score">Höchster Score</option><option value="mc">Höchste Marketcap</option></select>
+</div>
+<main id="list"></main>
+<footer>Quellen: CoinMarketCap, Four.Meme (über GeckoTerminal), DexScreener. Keine Anlageberatung.</footer>
+
+<script>
+let tokens = [], onlyHot = false;
+const $ = id => document.getElementById(id);
+const usd = v => !v ? "n/a" : v >= 1e9 ? "$" + (v/1e9).toFixed(2) + " Mrd." : v >= 1e6 ? "$" + (v/1e6).toFixed(2) + " Mio." : v >= 1e3 ? "$" + (v/1e3).toFixed(1) + "k" : "$" + v.toFixed(2);
+const ago = iso => { const h = (Date.now() - new Date(iso)) / 36e5; return h < 1 ? Math.round(h*60) + " Min." : h < 48 ? Math.round(h) + " Std." : Math.round(h/24) + " Tagen"; };
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const scoreColor = s => s >= 70 ? "var(--ok)" : s >= 40 ? "var(--warn)" : "var(--mut)";
+
+function render() {
+  const chain = $("f-chain").value, src = $("f-src").value, sort = $("f-sort").value;
+  let list = tokens.filter(t => (!onlyHot || t.breakthrough) && (!chain || t.chain === chain) && (!src || t.source === src));
+  if (sort === "score") list.sort((a,b) => b.score - a.score);
+  if (sort === "mc") list.sort((a,b) => (b.market?.marketcap_usd||0) - (a.market?.marketcap_usd||0));
+  if (!list.length) { $("list").innerHTML = '<div class="empty">Noch keine Treffer. Der Scanner läuft alle 15 Minuten.</div>'; return; }
+  $("list").innerHTML = list.map(t => {
+    const m = t.market || {};
+    const ch = m.change_24h || 0;
+    return `<div class="card ${t.breakthrough ? "hot" : ""}">
+      <div class="ava">${esc((t.symbol||"?").slice(0,3))}</div>
+      <div>
+        <div class="name">${esc(t.name)} <span class="meta">${esc(t.symbol)}</span></div>
+        <div class="meta">${esc(t.source)} · ${esc(t.chain_label)} · vor ${ago(t.listed_at)}</div>
+        <div class="tags">
+          ${t.breakthrough ? '<span class="tag ok">Durchbruch</span>' : ""}
+          ${(t.notes||[]).map(n => `<span class="tag warn">${esc(n)}</span>`).join("")}
+        </div>
+      </div>
+      <div class="score"><b style="color:${scoreColor(t.score)}">${t.score}</b><span>Score</span></div>
+      ${t.market ? `<div class="nums">
+        <div><small>Marketcap</small>${usd(m.marketcap_usd)}</div>
+        <div><small>Liquidität</small>${usd(m.liquidity_usd)}</div>
+        <div><small>Volumen 24h</small>${usd(m.volume_24h_usd)}</div>
+        <div><small>Preis 24h</small><span class="${ch >= 0 ? "up" : "down"}">${ch >= 0 ? "+" : ""}${ch.toFixed(1)}%</span></div>
+      </div>` : ""}
+      <div class="links">
+        ${m.dex_url ? `<a href="${esc(m.dex_url)}" target="_blank" rel="noopener">Chart</a>` : ""}
+        <a href="${esc(t.source_url)}" target="_blank" rel="noopener">${esc(t.source)}</a>
+        <a href="#" onclick="navigator.clipboard.writeText('${esc(t.address)}');this.textContent='Kopiert';return false">Adresse kopieren</a>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+async function load() {
+  try {
+    const d = await (await fetch("data.json?t=" + Date.now())).json();
+    tokens = d.tokens || [];
+    $("updated").textContent = d.updated ? "Letzter Scan vor " + ago(d.updated) : "Noch kein Scan";
+    $("s-total").textContent = tokens.length;
+    $("s-hot").textContent = tokens.filter(t => t.breakthrough).length;
+    $("s-24").textContent = tokens.filter(t => Date.now() - new Date(t.listed_at) < 864e5).length;
+    const chains = [...new Map(tokens.map(t => [t.chain, t.chain_label])).entries()];
+    const sel = $("f-chain"), cur = sel.value;
+    sel.innerHTML = '<option value="">Alle Chains</option>' + chains.map(([k,v]) => `<option value="${esc(k)}">${esc(v)}</option>`).join("");
+    sel.value = cur;
+    render();
+  } catch (e) { $("updated").textContent = "Daten konnten nicht geladen werden"; }
+}
+
+$("f-hot").onclick = () => { onlyHot = !onlyHot; $("f-hot").classList.toggle("on", onlyHot); render(); };
+$("f-chain").onchange = render;
+$("f-src").onchange = render;
+$("f-sort").onchange = render;
+load();
+setInterval(load, 5 * 60 * 1000);
+</script>
+</body>
+</html>
