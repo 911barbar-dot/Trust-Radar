@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-21T08:45:29.218129+00:00",
+  "last_run": "2026-11-21T09:41:51.008192+00:00",
   "watch": {
     "base:0xb20000000000000000000016e38fd364d271ba28": {
       "first_seen": "2026-11-20T14:37:49.488920+00:00",
@@ -151,7 +151,7 @@
     },
     "solana:6ombvv3yms9qpx1qkycd9xw8hksfv7vgrcfx3cxcymvy": {
       "first_seen": "2026-11-20T14:37:49.488920+00:00",
-      "alerted": false
+      "alerted": true
     },
     "solana:wingsaybfs4qnegcw8jpsvetqp8xhm3gkkvow54wlcd": {
       "first_seen": "2026-11-20T14:37:49.488920+00:00",
