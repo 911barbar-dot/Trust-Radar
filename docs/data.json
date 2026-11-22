@@ -1,6 +1,33 @@
 {
-  "updated": "2026-11-22T06:56:19.576690+00:00",
+  "updated": "2026-11-22T08:08:49.735419+00:00",
   "tokens": [
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0xaf12a073855e2f4a24a7b3d4429f026f84e94444",
+      "name": "irys ai",
+      "symbol": "IRYS",
+      "listed_at": "2026-11-22T07:22:43Z",
+      "source_url": "https://four.meme/token/0xaf12a073855e2f4a24a7b3d4429f026f84e94444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 5.696e-10,
+        "liquidity_usd": 0.04,
+        "volume_24h_usd": 21950.96,
+        "marketcap_usd": 0,
+        "change_24h": -100,
+        "buys_24h": 81,
+        "sells_24h": 96,
+        "dex_url": "https://dexscreener.com/bsc/0x7d0c08e2c37dfc480917c3a5a397fac1f4870570"
+      },
+      "score": 3,
+      "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Starker Preiseinbruch",
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
     {
       "source": "CoinMarketCap",
       "chain": "base",
