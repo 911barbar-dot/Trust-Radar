@@ -1,6 +1,30 @@
 {
-  "updated": "2026-11-23T05:10:37.304492+00:00",
+  "updated": "2026-11-23T06:18:55.061993+00:00",
   "tokens": [
+    {
+      "source": "CoinMarketCap",
+      "chain": "solana",
+      "address": "Bv1a7cEj5aRnJQhMw4kRQqAFesMSd5LwcDnUzq52BMmr",
+      "name": "FLOAT",
+      "symbol": "FLOAT",
+      "listed_at": "2026-11-23T05:58:03.000Z",
+      "source_url": "https://coinmarketcap.com/currencies/float/",
+      "chain_label": "Solana",
+      "market": {
+        "price_usd": 0.003749,
+        "liquidity_usd": 338929.58,
+        "volume_24h_usd": 413689.57,
+        "marketcap_usd": 3746091,
+        "change_24h": 6.72,
+        "buys_24h": 1421,
+        "sells_24h": 1298,
+        "dex_url": "https://dexscreener.com/solana/fjk9sajdc2q4herppu3ylzkmf2zbyzkpihqlv9e2bn5a"
+      },
+      "score": 44,
+      "notes": [],
+      "breakthrough": true,
+      "breakthrough_at": "2026-11-23T06:18:55.061993+00:00"
+    },
     {
       "source": "Four.Meme",
       "chain": "bsc",
