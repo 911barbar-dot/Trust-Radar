@@ -11,6 +11,7 @@ import os
 import time
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 import requests
 
@@ -33,6 +34,7 @@ TG_CHAT = os.getenv("TELEGRAM_CHAT_ID", "")
 
 UA = {"User-Agent": "trust-radar/1.0", "Accept": "application/json"}
 MAX_ENTRIES = 300
+STATS = {}
 
 CHAIN_LABEL = {
     "ethereum": "Ethereum", "bsc": "BNB Chain", "solana": "Solana", "base": "Base",
@@ -99,6 +101,7 @@ def source_cmc():
             headers=headers)
     if not r or r.status_code != 200:
         print("CoinMarketCap nicht erreichbar:", r.status_code if r else "keine Antwort")
+        STATS["cmc_error"] = r.status_code if r else "keine Antwort"
         return []
     out = []
     for c in r.json().get("data", []):
@@ -116,43 +119,99 @@ def source_cmc():
             "listed_at": c.get("date_added") or datetime.now(timezone.utc).isoformat(),
             "source_url": f"https://coinmarketcap.com/currencies/{c.get('slug', '')}/",
         })
+    STATS["cmc_found"] = len(out)
     print(f"CoinMarketCap: {len(out)} neue Listings")
     return out
 
 
 # ---------- Quelle 2: Four.Meme Graduierungen ----------
+# Four.Meme Token enden auf 4444 und wechseln nach dem Graduieren zu PancakeSwap.
+# Wir suchen über GeckoTerminal an drei Stellen, damit auch bei stündlichen Läufen nichts verloren geht:
+#   a) PancakeSwap Pools mit dem höchsten 24h Volumen (genau dort sind die Durchbrüche)
+#   b) Trending Pools auf BNB Chain
+#   c) Neueste Pools
+
+GT = "https://api.geckoterminal.com/api/v2/networks/bsc"
+
+
+def _parse_pools(body, cutoff, only_pancake=True):
+    tokens = {t["id"]: t["attributes"] for t in body.get("included", []) if t.get("type") == "token"}
+    out = []
+    for p in body.get("data", []):
+        rel = p.get("relationships", {})
+        dex = (rel.get("dex", {}).get("data") or {}).get("id", "")
+        if only_pancake and "pancakeswap" not in dex:
+            continue
+        created = p.get("attributes", {}).get("pool_created_at")
+        if created:
+            try:
+                if datetime.fromisoformat(created.replace("Z", "+00:00")) < cutoff:
+                    continue
+            except ValueError:
+                pass
+        for side in ("base_token", "quote_token"):
+            tok_id = (rel.get(side, {}).get("data") or {}).get("id", "")
+            addr = (tokens.get(tok_id, {}).get("address") or tok_id.split("_", 1)[-1])
+            if addr and any(addr.lower().endswith(s) for s in FOURMEME_SUFFIXES):
+                tok = tokens.get(tok_id, {})
+                out.append({
+                    "source": "Four.Meme",
+                    "chain": "bsc",
+                    "address": addr,
+                    "name": tok.get("name") or p["attributes"].get("name", "?").split(" / ")[0],
+                    "symbol": tok.get("symbol") or p["attributes"].get("name", "?").split(" / ")[0],
+                    "listed_at": created or datetime.now(timezone.utc).isoformat(),
+                    "source_url": f"https://four.meme/token/{addr}",
+                })
+                break
+    return out
+
 
 def source_fourmeme():
-    out = []
-    for page in range(1, GT_PAGES + 1):
-        r = get("https://api.geckoterminal.com/api/v2/networks/bsc/new_pools",
-                params={"page": page, "include": "base_token"})
-        if not r or r.status_code != 200:
-            break
-        body = r.json()
-        tokens = {t["id"]: t["attributes"] for t in body.get("included", []) if t.get("type") == "token"}
-        for p in body.get("data", []):
-            rel = p.get("relationships", {})
-            dex = (rel.get("dex", {}).get("data") or {}).get("id", "")
-            tok_id = (rel.get("base_token", {}).get("data") or {}).get("id", "")
-            tok = tokens.get(tok_id, {})
-            addr = tok.get("address") or tok_id.split("_", 1)[-1]
-            if not dex.startswith("pancakeswap"):
-                continue
-            if not any(addr.lower().endswith(s) for s in FOURMEME_SUFFIXES):
-                continue
-            out.append({
-                "source": "Four.Meme",
-                "chain": "bsc",
-                "address": addr,
-                "name": tok.get("name", "?"),
-                "symbol": tok.get("symbol", "?"),
-                "listed_at": p["attributes"].get("pool_created_at") or datetime.now(timezone.utc).isoformat(),
-                "source_url": f"https://four.meme/token/{addr}",
-            })
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=WATCH_HOURS)
+    inc = {"include": "base_token,quote_token"}
+    requests_done, errors, found = 0, 0, {}
+
+    def fetch(url, params):
+        nonlocal requests_done, errors
+        r = get(url, params=params)
+        requests_done += 1
         time.sleep(2.2)  # GeckoTerminal erlaubt 30 Abfragen pro Minute
-    print(f"Four.Meme: {len(out)} neue Graduierungen")
-    return out
+        if not r or r.status_code != 200:
+            errors += 1
+            print("GeckoTerminal Fehler:", url, r.status_code if r else "keine Antwort")
+            return None
+        return r.json()
+
+    # PancakeSwap Börsen auf BNB Chain ermitteln
+    dexes = []
+    body = fetch(f"{GT}/dexes", {"page": 1})
+    if body:
+        dexes = [d["id"] for d in body.get("data", []) if "pancakeswap" in d.get("id", "")]
+    if not dexes:
+        dexes = ["pancakeswap_v2", "pancakeswap-v3-bsc"]
+    print("PancakeSwap Börsen:", dexes)
+
+    jobs = []
+    for dex in dexes[:3]:
+        for page in range(1, 6):
+            jobs.append((f"{GT}/dexes/{dex}/pools", {**inc, "page": page, "sort": "h24_volume_usd_desc"}, True))
+    for dur in ("1h", "6h", "24h"):
+        jobs.append((f"{GT}/trending_pools", {**inc, "page": 1, "duration": dur}, True))
+    for page in range(1, GT_PAGES + 1):
+        jobs.append((f"{GT}/new_pools", {**inc, "page": page}, True))
+
+    for url, params, only_pancake in jobs:
+        body = fetch(url, params)
+        if body:
+            for c in _parse_pools(body, cutoff, only_pancake):
+                found.setdefault(c["address"].lower(), c)
+
+    STATS["fourmeme_requests"] = requests_done
+    STATS["fourmeme_errors"] = errors
+    STATS["fourmeme_found"] = len(found)
+    print(f"Four.Meme: {len(found)} Kandidaten ({requests_done} Abfragen, {errors} Fehler)")
+    return list(found.values())
 
 
 # ---------- Marktdaten (DexScreener, bis 30 Adressen pro Abfrage) ----------
@@ -243,6 +302,37 @@ def usd(v):
     return f"${v:,.2f}"
 
 
+def tg_send(text):
+    if not (TG_TOKEN and TG_CHAT):
+        print("Telegram nicht eingerichtet")
+        return False
+    try:
+        r = requests.post(
+            f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
+            json={"chat_id": TG_CHAT, "text": text, "parse_mode": "HTML",
+                  "disable_web_page_preview": True},
+            timeout=20,
+        )
+        if r.status_code != 200:
+            print("Telegram Fehler:", r.status_code, r.text[:200])
+        return r.status_code == 200
+    except requests.RequestException as ex:
+        print("Telegram Fehler:", ex)
+        return False
+
+
+def status_text(title, watch, data):
+    hot = sum(1 for t in data["tokens"] if t.get("breakthrough"))
+    lines = [f"<b>{title}</b>",
+             f"Coins in Beobachtung: {len(watch)}",
+             f"Durchbrüche gesamt: {hot}",
+             f"CoinMarketCap: {STATS.get('cmc_found', 0)} Kandidaten"
+             + (f" (Fehler {STATS['cmc_error']})" if "cmc_error" in STATS else ""),
+             f"Four.Meme: {STATS.get('fourmeme_found', 0)} Kandidaten"
+             + (f" ({STATS['fourmeme_errors']} Fehler)" if STATS.get("fourmeme_errors") else "")]
+    return "\n".join(lines)
+
+
 def send_telegram(e):
     if not (TG_TOKEN and TG_CHAT):
         print("Telegram nicht eingerichtet. Treffer:", e["symbol"])
@@ -266,15 +356,7 @@ def send_telegram(e):
     links.append(f'<a href="{e["source_url"]}">{e["source"]}</a>')
     lines.append(" | ".join(links))
     lines.append("\n<i>Keine Anlageberatung. Immer selbst prüfen.</i>")
-    try:
-        requests.post(
-            f"https://api.telegram.org/bot{TG_TOKEN}/sendMessage",
-            json={"chat_id": TG_CHAT, "text": "\n".join(lines),
-                  "parse_mode": "HTML", "disable_web_page_preview": True},
-            timeout=20,
-        )
-    except requests.RequestException as ex:
-        print("Telegram Fehler:", ex)
+    tg_send("\n".join(lines))
 
 
 # ---------- Ablauf ----------
@@ -332,6 +414,15 @@ def main():
     data["updated"] = now.isoformat()
     data["settings"] = {"min_liquidity": MIN_LIQUIDITY, "min_volume": MIN_VOLUME_24H,
                         "min_marketcap": MIN_MARKETCAP, "watch_hours": WATCH_HOURS}
+    # Testnachricht nach dem Update und tägliche Statusmeldung ab 08:00 Uhr Schweizer Zeit
+    local = now.astimezone(ZoneInfo("Europe/Zurich"))
+    if not state.get("telegram_verified"):
+        if tg_send(status_text("✅ Trust Radar ist verbunden", watch, data)):
+            state["telegram_verified"] = True
+    elif local.hour >= 8 and state.get("last_status_day") != local.date().isoformat():
+        if tg_send(status_text("📊 Tagesstatus Trust Radar", watch, data)):
+            state["last_status_day"] = local.date().isoformat()
+    data["stats"] = STATS
     state.update({"last_run": now.isoformat(), "watch": watch})
     save_json(DATA_FILE, data)
     save_json(STATE_FILE, state)
