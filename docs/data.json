@@ -1,6 +1,54 @@
 {
-  "updated": "2026-11-23T06:18:55.061993+00:00",
+  "updated": "2026-11-23T08:02:39.237186+00:00",
   "tokens": [
+    {
+      "source": "CoinMarketCap",
+      "chain": "base",
+      "address": "0xb2000000000000000000006F944897540579D3f2",
+      "name": "Robinhood Markets, Inc. Tokenized Stock (Coinbase)",
+      "symbol": "HOODc",
+      "listed_at": "2026-11-23T07:21:30.000Z",
+      "source_url": "https://coinmarketcap.com/currencies/robinhood-markets-inc-tokenized-stock-coinbase/",
+      "chain_label": "Base",
+      "market": {
+        "price_usd": 66.06,
+        "liquidity_usd": 230501.69,
+        "volume_24h_usd": 1701408.76,
+        "marketcap_usd": 177665,
+        "change_24h": 3.44,
+        "buys_24h": 1973,
+        "sells_24h": 1625,
+        "dex_url": "https://dexscreener.com/base/0x25b45ff27bd03dafa0c0bf458762ffd0911fa9de"
+      },
+      "score": 42,
+      "notes": [],
+      "breakthrough": false
+    },
+    {
+      "source": "CoinMarketCap",
+      "chain": "base",
+      "address": "0xb200000000000000000000d2f4cf2f7DEBB244BB",
+      "name": "McDonald's Corporation Tokenized Stock (Coinbase)",
+      "symbol": "MCDc",
+      "listed_at": "2026-11-23T07:21:29.000Z",
+      "source_url": "https://coinmarketcap.com/currencies/mcdonalds-corporation-tokenized-stock-coinbase/",
+      "chain_label": "Base",
+      "market": {
+        "price_usd": 272.56,
+        "liquidity_usd": 916.11,
+        "volume_24h_usd": 6429.75,
+        "marketcap_usd": 136431,
+        "change_24h": 0.67,
+        "buys_24h": 27,
+        "sells_24h": 26,
+        "dex_url": "https://dexscreener.com/base/0x743f16ee460ab7401321e7f35c3fd187eff7d711"
+      },
+      "score": 0,
+      "notes": [
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
     {
       "source": "CoinMarketCap",
       "chain": "solana",
@@ -11,13 +59,13 @@
       "source_url": "https://coinmarketcap.com/currencies/float/",
       "chain_label": "Solana",
       "market": {
-        "price_usd": 0.003749,
-        "liquidity_usd": 338929.58,
-        "volume_24h_usd": 413689.57,
-        "marketcap_usd": 3746091,
-        "change_24h": 6.72,
-        "buys_24h": 1421,
-        "sells_24h": 1298,
+        "price_usd": 0.003814,
+        "liquidity_usd": 341893.64,
+        "volume_24h_usd": 411920.9,
+        "marketcap_usd": 3811139,
+        "change_24h": 4.76,
+        "buys_24h": 1415,
+        "sells_24h": 1308,
         "dex_url": "https://dexscreener.com/solana/fjk9sajdc2q4herppu3ylzkmf2zbyzkpihqlv9e2bn5a"
       },
       "score": 44,
