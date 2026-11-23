@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T19:57:10.152060+00:00",
+  "updated": "2026-11-23T20:49:06.112726+00:00",
   "tokens": [
     {
       "source": "CoinMarketCap",
@@ -11,13 +11,13 @@
       "source_url": "https://coinmarketcap.com/currencies/robinhood-markets-inc-tokenized-stock-coinbase/",
       "chain_label": "Base",
       "market": {
-        "price_usd": 67.68,
-        "liquidity_usd": 230234.53,
-        "volume_24h_usd": 1998083.81,
-        "marketcap_usd": 182025,
-        "change_24h": 3.97,
-        "buys_24h": 3622,
-        "sells_24h": 3401,
+        "price_usd": 67.45,
+        "liquidity_usd": 226683.89,
+        "volume_24h_usd": 2057934.64,
+        "marketcap_usd": 181418,
+        "change_24h": 3.4,
+        "buys_24h": 3766,
+        "sells_24h": 3612,
         "dex_url": "https://dexscreener.com/base/0x25b45ff27bd03dafa0c0bf458762ffd0911fa9de"
       },
       "score": 40,
@@ -34,17 +34,20 @@
       "source_url": "https://coinmarketcap.com/currencies/mcdonalds-corporation-tokenized-stock-coinbase/",
       "chain_label": "Base",
       "market": {
-        "price_usd": 275.96,
-        "liquidity_usd": 209714.32,
-        "volume_24h_usd": 36611.18,
-        "marketcap_usd": 140647,
-        "change_24h": 1.64,
-        "buys_24h": 115,
-        "sells_24h": 109,
+        "price_usd": 276.66,
+        "liquidity_usd": 692.79,
+        "volume_24h_usd": 38268.42,
+        "marketcap_usd": 144032,
+        "change_24h": 1.89,
+        "buys_24h": 117,
+        "sells_24h": 113,
         "dex_url": "https://dexscreener.com/base/0x743f16ee460ab7401321e7f35c3fd187eff7d711"
       },
-      "score": 21,
-      "notes": [],
+      "score": 6,
+      "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Wenig Liquidität"
+      ],
       "breakthrough": false
     },
     {
@@ -57,13 +60,13 @@
       "source_url": "https://coinmarketcap.com/currencies/the-coca-cola-company-tokenized-stock-coinbase/",
       "chain_label": "Base",
       "market": {
-        "price_usd": 96.083,
-        "liquidity_usd": 310.53,
-        "volume_24h_usd": 1124.59,
-        "marketcap_usd": 144317,
-        "change_24h": -0.74,
-        "buys_24h": 17,
-        "sells_24h": 18,
+        "price_usd": 96.12,
+        "liquidity_usd": 310.6,
+        "volume_24h_usd": 1128.31,
+        "marketcap_usd": 144373,
+        "change_24h": -0.71,
+        "buys_24h": 18,
+        "sells_24h": 19,
         "dex_url": "https://dexscreener.com/base/0x59c7a81e752fca11b89e29fa98e56a6f2ead5fb3"
       },
       "score": 0,
@@ -82,18 +85,18 @@
       "source_url": "https://coinmarketcap.com/currencies/float/",
       "chain_label": "Solana",
       "market": {
-        "price_usd": 0.002877,
-        "liquidity_usd": 303250.73,
-        "volume_24h_usd": 455543.99,
-        "marketcap_usd": 2874996,
-        "change_24h": -35.68,
-        "buys_24h": 1664,
-        "sells_24h": 1058,
+        "price_usd": 0.002812,
+        "liquidity_usd": 299715.84,
+        "volume_24h_usd": 400810.49,
+        "marketcap_usd": 2809603,
+        "change_24h": -33.91,
+        "buys_24h": 1500,
+        "sells_24h": 892,
         "dex_url": "https://dexscreener.com/solana/fjk9sajdc2q4herppu3ylzkmf2zbyzkpihqlv9e2bn5a"
       },
-      "score": 48,
+      "score": 49,
       "notes": [
-        "Kaufdruck 61%"
+        "Kaufdruck 63%"
       ],
       "breakthrough": true,
       "breakthrough_at": "2026-11-23T06:18:55.061993+00:00"
