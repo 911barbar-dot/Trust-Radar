@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T05:58:26.065816+00:00",
+  "updated": "2026-11-24T07:12:08.497293+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -116,13 +116,13 @@
       "source_url": "https://coinmarketcap.com/currencies/robinhood-markets-inc-tokenized-stock-coinbase/",
       "chain_label": "Base",
       "market": {
-        "price_usd": 67.092,
-        "liquidity_usd": 234748.8,
-        "volume_24h_usd": 2087184.34,
-        "marketcap_usd": 193926,
-        "change_24h": 1.28,
-        "buys_24h": 3989,
-        "sells_24h": 4133,
+        "price_usd": 67.13,
+        "liquidity_usd": 235841.21,
+        "volume_24h_usd": 2100710.93,
+        "marketcap_usd": 194182,
+        "change_24h": 1.55,
+        "buys_24h": 4022,
+        "sells_24h": 4229,
         "dex_url": "https://dexscreener.com/base/0x25b45ff27bd03dafa0c0bf458762ffd0911fa9de"
       },
       "score": 38,
@@ -141,14 +141,14 @@
       "market": {
         "price_usd": 276.54,
         "liquidity_usd": 210487.36,
-        "volume_24h_usd": 42773.15,
+        "volume_24h_usd": 41907.89,
         "marketcap_usd": 143972,
-        "change_24h": 1.45,
-        "buys_24h": 122,
-        "sells_24h": 117,
+        "change_24h": 1.54,
+        "buys_24h": 118,
+        "sells_24h": 115,
         "dex_url": "https://dexscreener.com/base/0x743f16ee460ab7401321e7f35c3fd187eff7d711"
       },
-      "score": 21,
+      "score": 20,
       "notes": [],
       "breakthrough": false
     },
@@ -162,11 +162,11 @@
       "source_url": "https://coinmarketcap.com/currencies/the-coca-cola-company-tokenized-stock-coinbase/",
       "chain_label": "Base",
       "market": {
-        "price_usd": 96.33,
-        "liquidity_usd": 435.99,
-        "volume_24h_usd": 1192.98,
-        "marketcap_usd": 144688,
-        "change_24h": -0.02,
+        "price_usd": 96.13,
+        "liquidity_usd": 310.63,
+        "volume_24h_usd": 1194.51,
+        "marketcap_usd": 144388,
+        "change_24h": -0.45,
         "buys_24h": 18,
         "sells_24h": 17,
         "dex_url": "https://dexscreener.com/base/0x59c7a81e752fca11b89e29fa98e56a6f2ead5fb3"
