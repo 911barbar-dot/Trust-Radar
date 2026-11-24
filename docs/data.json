@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T14:28:17.258134+00:00",
+  "updated": "2026-11-24T15:35:03.260101+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -11,16 +11,16 @@
       "source_url": "https://four.meme/token/0x52da723df32ec12d5186a51de64a291752744444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 0.02111,
-        "liquidity_usd": 145.39,
-        "volume_24h_usd": 22.69,
-        "marketcap_usd": 633572,
-        "change_24h": 90.08,
-        "buys_24h": 18,
-        "sells_24h": 0,
+        "price_usd": 0.01841,
+        "liquidity_usd": 135.79,
+        "volume_24h_usd": 28.01,
+        "marketcap_usd": 552564,
+        "change_24h": 65.78,
+        "buys_24h": 19,
+        "sells_24h": 1,
         "dex_url": "https://dexscreener.com/bsc/0x93e830e069809f03c31c28f0bcd770715111648b"
       },
-      "score": 14,
+      "score": 12,
       "notes": [
         "Wenig Liquidität"
       ],
@@ -36,13 +36,13 @@
       "source_url": "https://coinmarketcap.com/currencies/spark-token/",
       "chain_label": "Polygon",
       "market": {
-        "price_usd": 0.9996,
-        "liquidity_usd": 10339.79,
-        "volume_24h_usd": 7733,
-        "marketcap_usd": 9996686,
-        "change_24h": -0.08,
+        "price_usd": 0.9997,
+        "liquidity_usd": 10340.33,
+        "volume_24h_usd": 7732.78,
+        "marketcap_usd": 9997588,
+        "change_24h": -0.02,
         "buys_24h": 24,
-        "sells_24h": 28,
+        "sells_24h": 29,
         "dex_url": "https://dexscreener.com/polygon/0x1811b3cd5e08b13397259461d9f0cd8b600db03f"
       },
       "score": 10,
@@ -1601,6 +1601,6 @@
     "cmc_found": 66,
     "fourmeme_requests": 29,
     "fourmeme_errors": 1,
-    "fourmeme_found": 1
+    "fourmeme_found": 0
   }
 }
