@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T09:48:32.587418+00:00",
+  "updated": "2026-11-24T10:52:02.194415+00:00",
   "tokens": [
     {
       "source": "CoinMarketCap",
@@ -11,16 +11,16 @@
       "source_url": "https://coinmarketcap.com/currencies/spark-token/",
       "chain_label": "Polygon",
       "market": {
-        "price_usd": 1.00022,
-        "liquidity_usd": 10343.48,
-        "volume_24h_usd": 8045.75,
-        "marketcap_usd": 10002256,
-        "change_24h": 0.01,
-        "buys_24h": 27,
-        "sells_24h": 28,
+        "price_usd": 0.9999,
+        "liquidity_usd": 10341.2,
+        "volume_24h_usd": 7897.18,
+        "marketcap_usd": 9999954,
+        "change_24h": 0.02,
+        "buys_24h": 26,
+        "sells_24h": 27,
         "dex_url": "https://dexscreener.com/polygon/0x1811b3cd5e08b13397259461d9f0cd8b600db03f"
       },
-      "score": 15,
+      "score": 10,
       "notes": [
         "Wenig Liquidität"
       ],
