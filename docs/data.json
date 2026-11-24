@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T02:53:34.240725+00:00",
+  "updated": "2026-11-24T03:52:21.012348+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -28,6 +28,86 @@
     },
     {
       "source": "CoinMarketCap",
+      "chain": "ethereum",
+      "address": "0xf1F558C95B14Ad95D4da1822770Dc4Ff0f1BCc30",
+      "name": "Franklin US Core Bond Tokenized ETF (Ondo)",
+      "symbol": "FLCBon",
+      "listed_at": "2026-11-24T02:27:53.000Z",
+      "source_url": "https://coinmarketcap.com/currencies/franklin-us-core-bond-tokenized-etf-ondo/",
+      "chain_label": "Ethereum",
+      "market": null,
+      "score": 0,
+      "notes": [
+        "Noch keine Handelsdaten"
+      ],
+      "breakthrough": false
+    },
+    {
+      "source": "CoinMarketCap",
+      "chain": "ethereum",
+      "address": "0x7FA8725e25b0C005a22499461AAA3f1b1C2962FE",
+      "name": "Franklin US Equity Bitcoin DRIP Index Tokenized ETF (Ondo)",
+      "symbol": "FBEQon",
+      "listed_at": "2026-11-24T02:27:53.000Z",
+      "source_url": "https://coinmarketcap.com/currencies/franklin-us-equity-bitcoin-drip-index-tokenized-etf-ondo/",
+      "chain_label": "Ethereum",
+      "market": null,
+      "score": 0,
+      "notes": [
+        "Noch keine Handelsdaten"
+      ],
+      "breakthrough": false
+    },
+    {
+      "source": "CoinMarketCap",
+      "chain": "ethereum",
+      "address": "0x3CCF4f79B5D6Aceb786c20F74B8DF07C7e14160F",
+      "name": "Franklin US Equity Index Tokenized ETF (Ondo)",
+      "symbol": "USPXon",
+      "listed_at": "2026-11-24T02:27:52.000Z",
+      "source_url": "https://coinmarketcap.com/currencies/franklin-us-equity-index-tokenized-etf-ondo/",
+      "chain_label": "Ethereum",
+      "market": null,
+      "score": 0,
+      "notes": [
+        "Noch keine Handelsdaten"
+      ],
+      "breakthrough": false
+    },
+    {
+      "source": "CoinMarketCap",
+      "chain": "ethereum",
+      "address": "0xfeebbDDDA97D26605050e85099E697fd9567D597",
+      "name": "Franklin US Treasury Bond Tokenized ETF (Ondo)",
+      "symbol": "FLGVon",
+      "listed_at": "2026-11-24T02:27:51.000Z",
+      "source_url": "https://coinmarketcap.com/currencies/franklin-us-treasury-bond-tokenized-etf-ondo/",
+      "chain_label": "Ethereum",
+      "market": null,
+      "score": 0,
+      "notes": [
+        "Noch keine Handelsdaten"
+      ],
+      "breakthrough": false
+    },
+    {
+      "source": "CoinMarketCap",
+      "chain": "ethereum",
+      "address": "0x6C190f0b8f7525244C6dcf0363A1241a99509101",
+      "name": "Take-Two Interactive Software Tokenized Stock (Ondo)",
+      "symbol": "TTWOon",
+      "listed_at": "2026-11-24T02:27:51.000Z",
+      "source_url": "https://coinmarketcap.com/currencies/take-two-interactive-software-tokenized-stock-ondo/",
+      "chain_label": "Ethereum",
+      "market": null,
+      "score": 0,
+      "notes": [
+        "Noch keine Handelsdaten"
+      ],
+      "breakthrough": false
+    },
+    {
+      "source": "CoinMarketCap",
       "chain": "base",
       "address": "0xb2000000000000000000006F944897540579D3f2",
       "name": "Robinhood Markets, Inc. Tokenized Stock (Coinbase)",
@@ -36,13 +116,13 @@
       "source_url": "https://coinmarketcap.com/currencies/robinhood-markets-inc-tokenized-stock-coinbase/",
       "chain_label": "Base",
       "market": {
-        "price_usd": 66.83,
-        "liquidity_usd": 227190.29,
-        "volume_24h_usd": 2048802.61,
-        "marketcap_usd": 186495,
-        "change_24h": 2.72,
-        "buys_24h": 4024,
-        "sells_24h": 3969,
+        "price_usd": 67.032,
+        "liquidity_usd": 230467.26,
+        "volume_24h_usd": 2070797.97,
+        "marketcap_usd": 188322,
+        "change_24h": 1.9,
+        "buys_24h": 3999,
+        "sells_24h": 4049,
         "dex_url": "https://dexscreener.com/base/0x25b45ff27bd03dafa0c0bf458762ffd0911fa9de"
       },
       "score": 39,
@@ -59,13 +139,13 @@
       "source_url": "https://coinmarketcap.com/currencies/mcdonalds-corporation-tokenized-stock-coinbase/",
       "chain_label": "Base",
       "market": {
-        "price_usd": 275.55,
-        "liquidity_usd": 210787.39,
-        "volume_24h_usd": 41719.74,
-        "marketcap_usd": 143457,
-        "change_24h": 0.69,
-        "buys_24h": 123,
-        "sells_24h": 112,
+        "price_usd": 275.92,
+        "liquidity_usd": 210799.88,
+        "volume_24h_usd": 42051.16,
+        "marketcap_usd": 143647,
+        "change_24h": 0.87,
+        "buys_24h": 124,
+        "sells_24h": 111,
         "dex_url": "https://dexscreener.com/base/0x743f16ee460ab7401321e7f35c3fd187eff7d711"
       },
       "score": 21,
@@ -82,17 +162,19 @@
       "source_url": "https://coinmarketcap.com/currencies/the-coca-cola-company-tokenized-stock-coinbase/",
       "chain_label": "Base",
       "market": {
-        "price_usd": 95.96,
-        "liquidity_usd": 209947.37,
-        "volume_24h_usd": 1160.57,
-        "marketcap_usd": 144144,
-        "change_24h": -1.06,
-        "buys_24h": 17,
-        "sells_24h": 21,
+        "price_usd": 96.33,
+        "liquidity_usd": 435.99,
+        "volume_24h_usd": 1193.58,
+        "marketcap_usd": 144688,
+        "change_24h": -0.48,
+        "buys_24h": 19,
+        "sells_24h": 20,
         "dex_url": "https://dexscreener.com/base/0x59c7a81e752fca11b89e29fa98e56a6f2ead5fb3"
       },
-      "score": 15,
-      "notes": [],
+      "score": 0,
+      "notes": [
+        "Wenig Liquidität"
+      ],
       "breakthrough": false
     },
     {
@@ -105,18 +187,18 @@
       "source_url": "https://coinmarketcap.com/currencies/float/",
       "chain_label": "Solana",
       "market": {
-        "price_usd": 0.002579,
-        "liquidity_usd": 284488.88,
-        "volume_24h_usd": 338901.28,
-        "marketcap_usd": 2577041,
-        "change_24h": -30.87,
-        "buys_24h": 1342,
-        "sells_24h": 615,
+        "price_usd": 0.002426,
+        "liquidity_usd": 277022.77,
+        "volume_24h_usd": 366910.23,
+        "marketcap_usd": 2423875,
+        "change_24h": -33.79,
+        "buys_24h": 1469,
+        "sells_24h": 687,
         "dex_url": "https://dexscreener.com/solana/fjk9sajdc2q4herppu3ylzkmf2zbyzkpihqlv9e2bn5a"
       },
       "score": 52,
       "notes": [
-        "Kaufdruck 69%"
+        "Kaufdruck 68%"
       ],
       "breakthrough": true,
       "breakthrough_at": "2026-11-23T06:18:55.061993+00:00"
@@ -1466,9 +1548,9 @@
     "watch_hours": 24.0
   },
   "stats": {
-    "cmc_found": 64,
+    "cmc_found": 65,
     "fourmeme_requests": 29,
-    "fourmeme_errors": 0,
-    "fourmeme_found": 1
+    "fourmeme_errors": 1,
+    "fourmeme_found": 0
   }
 }
