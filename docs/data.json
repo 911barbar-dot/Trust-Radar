@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T02:02:57.682960+00:00",
+  "updated": "2026-11-25T03:09:06.737375+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -11,13 +11,13 @@
       "source_url": "https://four.meme/token/0x3e17ee3b1895dd1a7cf993a89769c5e029584444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 0.0008646,
-        "liquidity_usd": 202035.55,
-        "volume_24h_usd": 103260.06,
-        "marketcap_usd": 864650,
-        "change_24h": -6.45,
-        "buys_24h": 122,
-        "sells_24h": 107,
+        "price_usd": 0.0008633,
+        "liquidity_usd": 201781.19,
+        "volume_24h_usd": 100756.06,
+        "marketcap_usd": 863350,
+        "change_24h": -5.87,
+        "buys_24h": 112,
+        "sells_24h": 96,
         "dex_url": "https://dexscreener.com/bsc/0xf79501dc9a6b78279a5b723fbf2d62234fa0fca6"
       },
       "score": 33,
@@ -35,16 +35,16 @@
       "source_url": "https://coinmarketcap.com/currencies/rocketraccoon/",
       "chain_label": "Solana",
       "market": {
-        "price_usd": 0.0006924,
-        "liquidity_usd": 76119.74,
-        "volume_24h_usd": 47892.7,
-        "marketcap_usd": 670074,
-        "change_24h": -2.12,
-        "buys_24h": 25846,
-        "sells_24h": 25116,
+        "price_usd": 0.0007715,
+        "liquidity_usd": 80503.32,
+        "volume_24h_usd": 52188.47,
+        "marketcap_usd": 746609,
+        "change_24h": -1.48,
+        "buys_24h": 26031,
+        "sells_24h": 25173,
         "dex_url": "https://dexscreener.com/solana/9nlfujwrhgqyxkw2jukka1gjvtibxaty2ad4qrysckke"
       },
-      "score": 18,
+      "score": 24,
       "notes": [],
       "breakthrough": false
     },
@@ -58,13 +58,13 @@
       "source_url": "https://four.meme/token/0xf74548802f4c700315f019fde17178b392ee4444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 5.345e-05,
-        "liquidity_usd": 24010.96,
-        "volume_24h_usd": 215.36,
-        "marketcap_usd": 52825,
-        "change_24h": -0.73,
+        "price_usd": 5.336e-05,
+        "liquidity_usd": 23992.28,
+        "volume_24h_usd": 201.3,
+        "marketcap_usd": 52745,
+        "change_24h": -0.48,
         "buys_24h": 5,
-        "sells_24h": 30,
+        "sells_24h": 26,
         "dex_url": "https://dexscreener.com/bsc/0xd3c8668bff07b02d78019afe7f9a6e581499def2"
       },
       "score": 0,
@@ -83,16 +83,16 @@
       "source_url": "https://four.meme/token/0x52da723df32ec12d5186a51de64a291752744444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 0.01393,
-        "liquidity_usd": 118.12,
-        "volume_24h_usd": 38.99,
-        "marketcap_usd": 417988,
-        "change_24h": 25.4,
+        "price_usd": 0.01386,
+        "liquidity_usd": 117.83,
+        "volume_24h_usd": 39.13,
+        "marketcap_usd": 415950,
+        "change_24h": 24.79,
         "buys_24h": 20,
-        "sells_24h": 7,
+        "sells_24h": 8,
         "dex_url": "https://dexscreener.com/bsc/0x93e830e069809f03c31c28f0bcd770715111648b"
       },
-      "score": 8,
+      "score": 7,
       "notes": [
         "Wenig Liquidität"
       ],
@@ -108,11 +108,11 @@
       "source_url": "https://coinmarketcap.com/currencies/spark-token/",
       "chain_label": "Polygon",
       "market": {
-        "price_usd": 0.9997,
-        "liquidity_usd": 10341.27,
-        "volume_24h_usd": 3832.06,
-        "marketcap_usd": 9997960,
-        "change_24h": -0.11,
+        "price_usd": 0.9995,
+        "liquidity_usd": 10339.96,
+        "volume_24h_usd": 3951.78,
+        "marketcap_usd": 9995179,
+        "change_24h": -0.06,
         "buys_24h": 23,
         "sells_24h": 27,
         "dex_url": "https://dexscreener.com/polygon/0x1811b3cd5e08b13397259461d9f0cd8b600db03f"
@@ -1672,7 +1672,7 @@
   "stats": {
     "cmc_found": 66,
     "fourmeme_requests": 29,
-    "fourmeme_errors": 2,
+    "fourmeme_errors": 1,
     "fourmeme_found": 0
   }
 }
