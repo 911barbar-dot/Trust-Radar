@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T12:48:48.690924+00:00",
+  "updated": "2026-11-25T14:16:46.300643+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -11,19 +11,17 @@
       "source_url": "https://four.meme/token/0x3e17ee3b1895dd1a7cf993a89769c5e029584444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 0.0008778,
-        "liquidity_usd": 202998.62,
-        "volume_24h_usd": 103360.46,
-        "marketcap_usd": 877805,
-        "change_24h": -3.29,
+        "price_usd": 0.000868,
+        "liquidity_usd": 201005.86,
+        "volume_24h_usd": 103342.27,
+        "marketcap_usd": 868064,
+        "change_24h": -3.21,
         "buys_24h": 132,
-        "sells_24h": 106,
+        "sells_24h": 109,
         "dex_url": "https://dexscreener.com/bsc/0xf79501dc9a6b78279a5b723fbf2d62234fa0fca6"
       },
       "score": 34,
-      "notes": [
-        "Kaufdruck 55%"
-      ],
+      "notes": [],
       "breakthrough": true,
       "breakthrough_at": "2026-11-24T20:46:27.408789+00:00"
     },
@@ -37,13 +35,13 @@
       "source_url": "https://coinmarketcap.com/currencies/rocketraccoon/",
       "chain_label": "Solana",
       "market": {
-        "price_usd": 0.0007615,
-        "liquidity_usd": 79522.55,
-        "volume_24h_usd": 89377.9,
-        "marketcap_usd": 736917,
-        "change_24h": 1.11,
-        "buys_24h": 27548,
-        "sells_24h": 25406,
+        "price_usd": 0.0007182,
+        "liquidity_usd": 77046.58,
+        "volume_24h_usd": 98371.01,
+        "marketcap_usd": 695031,
+        "change_24h": -2.77,
+        "buys_24h": 27995,
+        "sells_24h": 25631,
         "dex_url": "https://dexscreener.com/solana/9nlfujwrhgqyxkw2jukka1gjvtibxaty2ad4qrysckke"
       },
       "score": 25,
@@ -60,13 +58,13 @@
       "source_url": "https://four.meme/token/0xf74548802f4c700315f019fde17178b392ee4444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 5.123e-05,
-        "liquidity_usd": 23488.36,
-        "volume_24h_usd": 604.17,
-        "marketcap_usd": 50632,
-        "change_24h": -3.98,
-        "buys_24h": 19,
-        "sells_24h": 31,
+        "price_usd": 5.119e-05,
+        "liquidity_usd": 23478.21,
+        "volume_24h_usd": 766.33,
+        "marketcap_usd": 50593,
+        "change_24h": -4.06,
+        "buys_24h": 20,
+        "sells_24h": 43,
         "dex_url": "https://dexscreener.com/bsc/0xd3c8668bff07b02d78019afe7f9a6e581499def2"
       },
       "score": 0,
@@ -87,14 +85,14 @@
       "market": {
         "price_usd": 0.01389,
         "liquidity_usd": 117.94,
-        "volume_24h_usd": 39.19,
+        "volume_24h_usd": 26.5,
         "marketcap_usd": 416701,
-        "change_24h": 25.02,
-        "buys_24h": 21,
+        "change_24h": -14.59,
+        "buys_24h": 11,
         "sells_24h": 8,
         "dex_url": "https://dexscreener.com/bsc/0x93e830e069809f03c31c28f0bcd770715111648b"
       },
-      "score": 8,
+      "score": 5,
       "notes": [
         "Wenig Liquidität"
       ],
@@ -240,13 +238,13 @@
       "source_url": "https://coinmarketcap.com/currencies/ishares-expanded-tech-software-sector-etf-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 199.98,
+        "price_usd": 91.92,
         "liquidity_usd": 0,
-        "volume_24h_usd": 0,
-        "marketcap_usd": 742549,
-        "change_24h": 0,
+        "volume_24h_usd": 3803.6,
+        "marketcap_usd": 346319,
+        "change_24h": -14.14,
         "buys_24h": 0,
-        "sells_24h": 0,
+        "sells_24h": 13,
         "dex_url": "https://dexscreener.com/bsc/0x13472833690183f31312144954e0ea3f0a620cc3966157a76669e0b796f88b37"
       },
       "score": 5,
@@ -263,17 +261,19 @@
       "source_url": "https://coinmarketcap.com/currencies/ishares-semiconductor-etf-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 200.0035,
-        "liquidity_usd": 0,
-        "volume_24h_usd": 0,
-        "marketcap_usd": 1079871,
-        "change_24h": 0,
-        "buys_24h": 0,
-        "sells_24h": 0,
+        "price_usd": 123.22,
+        "liquidity_usd": 3857.97,
+        "volume_24h_usd": 46681.8,
+        "marketcap_usd": 692328,
+        "change_24h": -11.4,
+        "buys_24h": 124,
+        "sells_24h": 149,
         "dex_url": "https://dexscreener.com/bsc/0xfadde7e8953b1251e0c4c477568f149f518897dcf4cec28c00ab9a3003ad01b7"
       },
-      "score": 10,
-      "notes": [],
+      "score": 8,
+      "notes": [
+        "Wenig Liquidität"
+      ],
       "breakthrough": false
     },
     {
@@ -286,17 +286,19 @@
       "source_url": "https://coinmarketcap.com/currencies/ishares-future-ai-tech-etf-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 99.99,
-        "liquidity_usd": 0,
-        "volume_24h_usd": 0,
-        "marketcap_usd": 650665,
-        "change_24h": 0,
-        "buys_24h": 0,
-        "sells_24h": 0,
-        "dex_url": "https://dexscreener.com/bsc/0x03daa4ed5f4955e03df7b9eca4e256047f660d8b3ee861069b49bdbef711a996"
+        "price_usd": 53.66,
+        "liquidity_usd": 499.72,
+        "volume_24h_usd": 295.6,
+        "marketcap_usd": 354641,
+        "change_24h": 0.97,
+        "buys_24h": 2,
+        "sells_24h": 1,
+        "dex_url": "https://dexscreener.com/bsc/0xa69ea851439a3fd3273741cfd8a24b20d7d03a1d920379194b6dd01ab9f69b14"
       },
       "score": 5,
-      "notes": [],
+      "notes": [
+        "Wenig Liquidität"
+      ],
       "breakthrough": false
     },
     {
@@ -309,17 +311,19 @@
       "source_url": "https://coinmarketcap.com/currencies/freedom-holding-corp-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 299.97,
-        "liquidity_usd": 0,
-        "volume_24h_usd": 0,
-        "marketcap_usd": 4253642,
-        "change_24h": 0,
-        "buys_24h": 0,
-        "sells_24h": 0,
+        "price_usd": 172.17,
+        "liquidity_usd": 9649.59,
+        "volume_24h_usd": 13046.05,
+        "marketcap_usd": 2441466,
+        "change_24h": -6.41,
+        "buys_24h": 16,
+        "sells_24h": 53,
         "dex_url": "https://dexscreener.com/bsc/0x27fdefdbd989982ffbc4c7ab02817d87f6a1de6be3e0a6cc1581af44af2e1e5a"
       },
       "score": 10,
-      "notes": [],
+      "notes": [
+        "Wenig Liquidität"
+      ],
       "breakthrough": false
     },
     {
@@ -332,17 +336,20 @@
       "source_url": "https://coinmarketcap.com/currencies/ishares-bitcoin-trust-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 34.99,
-        "liquidity_usd": 0,
-        "volume_24h_usd": 0,
-        "marketcap_usd": 363364,
-        "change_24h": 0,
-        "buys_24h": 0,
-        "sells_24h": 0,
-        "dex_url": "https://dexscreener.com/bsc/0x18264f86d4ae1fae99be953a37ea0eb38617397ae6434ecce8dcad714933a51d"
+        "price_usd": 33.45,
+        "liquidity_usd": 5948.51,
+        "volume_24h_usd": 25724.34,
+        "marketcap_usd": 361466,
+        "change_24h": -54.79,
+        "buys_24h": 49,
+        "sells_24h": 95,
+        "dex_url": "https://dexscreener.com/bsc/0x3ce9455618ed368fd27154ffe8c6bc1899ba028334cf7b7ca9a628658fdc9197"
       },
       "score": 5,
-      "notes": [],
+      "notes": [
+        "Starker Preiseinbruch",
+        "Wenig Liquidität"
+      ],
       "breakthrough": false
     },
     {
