@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T21:41:53.973846+00:00",
+  "updated": "2026-11-25T22:38:05.939596+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -38,20 +38,17 @@
       "source_url": "https://four.meme/token/0x59da35b43734ecb5b24aecd8c76a8d28ed014444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 1.13e-06,
-        "liquidity_usd": 0.72,
-        "volume_24h_usd": 24.94,
-        "marketcap_usd": 11875,
-        "change_24h": -96.65,
-        "buys_24h": 81,
-        "sells_24h": 26,
-        "dex_url": "https://dexscreener.com/bsc/0xceded510ae64b2b9fdaaee504885d2d12584bb40"
+        "price_usd": 2.149e-07,
+        "liquidity_usd": 0.12,
+        "volume_24h_usd": 0.31,
+        "marketcap_usd": 406,
+        "change_24h": 116,
+        "buys_24h": 3,
+        "sells_24h": 2,
+        "dex_url": "https://dexscreener.com/bsc/0x6a7c6843cccb763411cad440568b81f68623a0daddfcbc976ad1df77c35bbf3a"
       },
-      "score": 15,
+      "score": 10,
       "notes": [
-        "Kaufdruck 76%",
-        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
-        "Starker Preiseinbruch",
         "Wenig Liquidität"
       ],
       "breakthrough": false
@@ -66,13 +63,13 @@
       "source_url": "https://coinmarketcap.com/currencies/tethercoin-v5/",
       "chain_label": "Tron",
       "market": {
-        "price_usd": 0.9967,
-        "liquidity_usd": 398.23,
-        "volume_24h_usd": 11.73,
-        "marketcap_usd": 17542659202023,
-        "change_24h": -1.51,
-        "buys_24h": 12,
-        "sells_24h": 11,
+        "price_usd": 0.9969,
+        "liquidity_usd": 398.28,
+        "volume_24h_usd": 15.78,
+        "marketcap_usd": 17546091202024,
+        "change_24h": -1.49,
+        "buys_24h": 16,
+        "sells_24h": 15,
         "dex_url": "https://dexscreener.com/tron/tghdiurgj5dg3rsjyeeypetare6boez9v5"
       },
       "score": 20,
@@ -417,18 +414,17 @@
       "source_url": "https://coinmarketcap.com/currencies/ishares-bitcoin-trust-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 33.44,
-        "liquidity_usd": 5947.46,
-        "volume_24h_usd": 25728.94,
-        "marketcap_usd": 361401,
-        "change_24h": -54.8,
-        "buys_24h": 49,
-        "sells_24h": 105,
-        "dex_url": "https://dexscreener.com/bsc/0x3ce9455618ed368fd27154ffe8c6bc1899ba028334cf7b7ca9a628658fdc9197"
+        "price_usd": 34.72,
+        "liquidity_usd": 891.2,
+        "volume_24h_usd": 856.22,
+        "marketcap_usd": 375187,
+        "change_24h": -2.63,
+        "buys_24h": 6,
+        "sells_24h": 11,
+        "dex_url": "https://dexscreener.com/bsc/0xa85d90fbcd4c5d12c0f2e7cf25b8b421f841a6185ddc217a00f640256d62ef0d"
       },
       "score": 5,
       "notes": [
-        "Starker Preiseinbruch",
         "Wenig Liquidität"
       ],
       "breakthrough": false
