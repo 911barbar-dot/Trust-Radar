@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T18:32:42.900822+00:00",
+  "updated": "2026-11-25T19:39:30.120771+00:00",
   "tokens": [
     {
       "source": "CoinMarketCap",
@@ -11,13 +11,13 @@
       "source_url": "https://coinmarketcap.com/currencies/tethercoin-v5/",
       "chain_label": "Tron",
       "market": {
-        "price_usd": 0.9908,
-        "liquidity_usd": 99.76,
-        "volume_24h_usd": 2.1,
-        "marketcap_usd": 17438836802011,
-        "change_24h": -2.09,
-        "buys_24h": 2,
-        "sells_24h": 2,
+        "price_usd": 1.0012,
+        "liquidity_usd": 399.11,
+        "volume_24h_usd": 4.15,
+        "marketcap_usd": 17622827202033,
+        "change_24h": -1.06,
+        "buys_24h": 5,
+        "sells_24h": 3,
         "dex_url": "https://dexscreener.com/tron/tghdiurgj5dg3rsjyeeypetare6boez9v5"
       },
       "score": 20,
@@ -36,13 +36,13 @@
       "source_url": "https://four.meme/token/0x3e17ee3b1895dd1a7cf993a89769c5e029584444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 0.000902,
-        "liquidity_usd": 207959.87,
-        "volume_24h_usd": 15140.43,
-        "marketcap_usd": 902012,
-        "change_24h": 2.21,
-        "buys_24h": 116,
-        "sells_24h": 106,
+        "price_usd": 0.0009025,
+        "liquidity_usd": 208600.96,
+        "volume_24h_usd": 15320.48,
+        "marketcap_usd": 902556,
+        "change_24h": 2.53,
+        "buys_24h": 115,
+        "sells_24h": 107,
         "dex_url": "https://dexscreener.com/bsc/0xf79501dc9a6b78279a5b723fbf2d62234fa0fca6"
       },
       "score": 26,
@@ -1822,7 +1822,7 @@
   "stats": {
     "cmc_found": 65,
     "fourmeme_requests": 29,
-    "fourmeme_errors": 0,
+    "fourmeme_errors": 1,
     "fourmeme_found": 0
   }
 }
