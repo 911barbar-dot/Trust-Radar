@@ -1,6 +1,22 @@
 {
-  "updated": "2026-11-25T15:31:12.444348+00:00",
+  "updated": "2026-11-25T16:45:19.996121+00:00",
   "tokens": [
+    {
+      "source": "CoinMarketCap",
+      "chain": "tron",
+      "address": "TDmQKXg8eVqy3gaMRxRNdtsCWS7AMDgRfT",
+      "name": "TetherCoin V5",
+      "symbol": "V5SDT",
+      "listed_at": "2026-11-25T13:54:04.000Z",
+      "source_url": "https://coinmarketcap.com/currencies/tethercoin-v5/",
+      "chain_label": "Tron",
+      "market": null,
+      "score": 0,
+      "notes": [
+        "Noch keine Handelsdaten"
+      ],
+      "breakthrough": false
+    },
     {
       "source": "Four.Meme",
       "chain": "bsc",
@@ -11,18 +27,18 @@
       "source_url": "https://four.meme/token/0x3e17ee3b1895dd1a7cf993a89769c5e029584444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 0.0008489,
-        "liquidity_usd": 198791.78,
-        "volume_24h_usd": 106201.66,
-        "marketcap_usd": 848994,
-        "change_24h": -4.91,
-        "buys_24h": 171,
-        "sells_24h": 122,
+        "price_usd": 0.0008871,
+        "liquidity_usd": 203561.48,
+        "volume_24h_usd": 107449.86,
+        "marketcap_usd": 887150,
+        "change_24h": -0.38,
+        "buys_24h": 177,
+        "sells_24h": 133,
         "dex_url": "https://dexscreener.com/bsc/0xf79501dc9a6b78279a5b723fbf2d62234fa0fca6"
       },
       "score": 35,
       "notes": [
-        "Kaufdruck 58%"
+        "Kaufdruck 57%"
       ],
       "breakthrough": true,
       "breakthrough_at": "2026-11-24T20:46:27.408789+00:00"
@@ -37,13 +53,13 @@
       "source_url": "https://coinmarketcap.com/currencies/rocketraccoon/",
       "chain_label": "Solana",
       "market": {
-        "price_usd": 0.0006816,
-        "liquidity_usd": 75415.82,
-        "volume_24h_usd": 103941.97,
-        "marketcap_usd": 659555,
-        "change_24h": -3.29,
-        "buys_24h": 28016,
-        "sells_24h": 25482,
+        "price_usd": 0.0007475,
+        "liquidity_usd": 80180.64,
+        "volume_24h_usd": 109421.79,
+        "marketcap_usd": 723338,
+        "change_24h": 0.47,
+        "buys_24h": 28410,
+        "sells_24h": 25695,
         "dex_url": "https://dexscreener.com/solana/9nlfujwrhgqyxkw2jukka1gjvtibxaty2ad4qrysckke"
       },
       "score": 25,
@@ -264,16 +280,16 @@
       "source_url": "https://coinmarketcap.com/currencies/ishares-semiconductor-etf-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 121.87,
-        "liquidity_usd": 3098.79,
-        "volume_24h_usd": 47261.59,
-        "marketcap_usd": 685095,
-        "change_24h": -12.37,
-        "buys_24h": 124,
-        "sells_24h": 154,
-        "dex_url": "https://dexscreener.com/bsc/0xfadde7e8953b1251e0c4c477568f149f518897dcf4cec28c00ab9a3003ad01b7"
+        "price_usd": 110.0093,
+        "liquidity_usd": 426.54,
+        "volume_24h_usd": 0,
+        "marketcap_usd": 728941,
+        "change_24h": 0,
+        "buys_24h": 0,
+        "sells_24h": 0,
+        "dex_url": "https://dexscreener.com/bsc/0x61bb391bab75281995161d249389aadd3e1f448b0611407589a202b297349b52"
       },
-      "score": 7,
+      "score": 5,
       "notes": [
         "Wenig Liquidität"
       ],
