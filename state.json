@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-25T11:40:42.929094+00:00",
+  "last_run": "2026-11-25T12:48:48.690924+00:00",
   "watch": {
     "bsc:0x52da723df32ec12d5186a51de64a291752744444": {
       "first_seen": "2026-11-24T14:28:17.258134+00:00",
@@ -16,6 +16,26 @@
     "bsc:0x3e17ee3b1895dd1a7cf993a89769c5e029584444": {
       "first_seen": "2026-11-24T20:46:27.408789+00:00",
       "alerted": true
+    },
+    "bsc:0x3f9550a5355e11c4c4e24a82e47b53a4a5d1e17d": {
+      "first_seen": "2026-11-25T12:48:48.690924+00:00",
+      "alerted": false
+    },
+    "bsc:0xcd1e9a6d7416674347c44e7a95b1f5954540fffd": {
+      "first_seen": "2026-11-25T12:48:48.690924+00:00",
+      "alerted": false
+    },
+    "bsc:0x4c7ae9c293641cd1530ba3ab1b14ef004193e928": {
+      "first_seen": "2026-11-25T12:48:48.690924+00:00",
+      "alerted": false
+    },
+    "bsc:0x091d185e0702131a3047beb6460454f43d667e80": {
+      "first_seen": "2026-11-25T12:48:48.690924+00:00",
+      "alerted": false
+    },
+    "bsc:0x2480a1b8e5f68752fe880fba96e5517369a5f6a1": {
+      "first_seen": "2026-11-25T12:48:48.690924+00:00",
+      "alerted": false
     }
   },
   "telegram_verified": true,
