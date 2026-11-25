@@ -1,6 +1,60 @@
 {
-  "updated": "2026-11-25T22:38:05.939596+00:00",
+  "updated": "2026-11-25T23:32:19.677414+00:00",
   "tokens": [
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0xce645bfaafb98234c89f97513bf213cff1c34444",
+      "name": "All I Want for Christmas Is You",
+      "symbol": "YOU",
+      "listed_at": "2026-11-25T22:43:18Z",
+      "source_url": "https://four.meme/token/0xce645bfaafb98234c89f97513bf213cff1c34444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 3.848e-08,
+        "liquidity_usd": 0.29,
+        "volume_24h_usd": 23.59,
+        "marketcap_usd": 404,
+        "change_24h": -99.93,
+        "buys_24h": 38,
+        "sells_24h": 7,
+        "dex_url": "https://dexscreener.com/bsc/0x61c8e579670f0d1c60357d23959e5f0ffaae75ff"
+      },
+      "score": 0,
+      "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Starker Preiseinbruch",
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0xbfb75f32701f18d1b52d2dcd2e5d9e4f5c8e4444",
+      "name": "My Moon My Man",
+      "symbol": "4MMMM",
+      "listed_at": "2026-11-25T22:20:43Z",
+      "source_url": "https://four.meme/token/0xbfb75f32701f18d1b52d2dcd2e5d9e4f5c8e4444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 2.137e-07,
+        "liquidity_usd": 0.31,
+        "volume_24h_usd": 21.1,
+        "marketcap_usd": 2245,
+        "change_24h": -99.69,
+        "buys_24h": 43,
+        "sells_24h": 7,
+        "dex_url": "https://dexscreener.com/bsc/0x58faa067d971b06df06abd5c625aee0d5579dca1"
+      },
+      "score": 0,
+      "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Starker Preiseinbruch",
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
     {
       "source": "Four.Meme",
       "chain": "bsc",
@@ -38,17 +92,18 @@
       "source_url": "https://four.meme/token/0x59da35b43734ecb5b24aecd8c76a8d28ed014444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 2.149e-07,
-        "liquidity_usd": 0.12,
-        "volume_24h_usd": 0.31,
-        "marketcap_usd": 406,
-        "change_24h": 116,
-        "buys_24h": 3,
-        "sells_24h": 2,
+        "price_usd": 1.782e-08,
+        "liquidity_usd": 0.03,
+        "volume_24h_usd": 0.39,
+        "marketcap_usd": 34,
+        "change_24h": -82.09,
+        "buys_24h": 5,
+        "sells_24h": 3,
         "dex_url": "https://dexscreener.com/bsc/0x6a7c6843cccb763411cad440568b81f68623a0daddfcbc976ad1df77c35bbf3a"
       },
-      "score": 10,
+      "score": 0,
       "notes": [
+        "Starker Preiseinbruch",
         "Wenig Liquidität"
       ],
       "breakthrough": false
@@ -63,13 +118,13 @@
       "source_url": "https://coinmarketcap.com/currencies/tethercoin-v5/",
       "chain_label": "Tron",
       "market": {
-        "price_usd": 0.9969,
-        "liquidity_usd": 398.28,
-        "volume_24h_usd": 15.78,
-        "marketcap_usd": 17546091202024,
-        "change_24h": -1.49,
-        "buys_24h": 16,
-        "sells_24h": 15,
+        "price_usd": 0.997,
+        "liquidity_usd": 398.31,
+        "volume_24h_usd": 18.82,
+        "marketcap_usd": 17548203202024,
+        "change_24h": -1.48,
+        "buys_24h": 19,
+        "sells_24h": 18,
         "dex_url": "https://dexscreener.com/tron/tghdiurgj5dg3rsjyeeypetare6boez9v5"
       },
       "score": 20,
@@ -1874,6 +1929,6 @@
     "cmc_found": 65,
     "fourmeme_requests": 29,
     "fourmeme_errors": 1,
-    "fourmeme_found": 2
+    "fourmeme_found": 3
   }
 }
