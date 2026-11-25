@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T05:31:30.047748+00:00",
+  "updated": "2026-11-25T06:41:30.659583+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -11,18 +11,18 @@
       "source_url": "https://four.meme/token/0x3e17ee3b1895dd1a7cf993a89769c5e029584444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 0.0008646,
-        "liquidity_usd": 202047.47,
-        "volume_24h_usd": 100577.25,
-        "marketcap_usd": 864642,
-        "change_24h": -5.84,
-        "buys_24h": 117,
-        "sells_24h": 88,
+        "price_usd": 0.0008679,
+        "liquidity_usd": 202512.8,
+        "volume_24h_usd": 99844.34,
+        "marketcap_usd": 867954,
+        "change_24h": -5.35,
+        "buys_24h": 118,
+        "sells_24h": 86,
         "dex_url": "https://dexscreener.com/bsc/0xf79501dc9a6b78279a5b723fbf2d62234fa0fca6"
       },
       "score": 35,
       "notes": [
-        "Kaufdruck 57%"
+        "Kaufdruck 58%"
       ],
       "breakthrough": true,
       "breakthrough_at": "2026-11-24T20:46:27.408789+00:00"
@@ -37,13 +37,13 @@
       "source_url": "https://coinmarketcap.com/currencies/rocketraccoon/",
       "chain_label": "Solana",
       "market": {
-        "price_usd": 0.0007368,
-        "liquidity_usd": 78412.89,
-        "volume_24h_usd": 65225.48,
-        "marketcap_usd": 713003,
-        "change_24h": 3.45,
-        "buys_24h": 26463,
-        "sells_24h": 25305,
+        "price_usd": 0.0007588,
+        "liquidity_usd": 79625.05,
+        "volume_24h_usd": 68976.79,
+        "marketcap_usd": 734314,
+        "change_24h": 2.19,
+        "buys_24h": 26669,
+        "sells_24h": 25354,
         "dex_url": "https://dexscreener.com/solana/9nlfujwrhgqyxkw2jukka1gjvtibxaty2ad4qrysckke"
       },
       "score": 25,
@@ -110,16 +110,16 @@
       "source_url": "https://coinmarketcap.com/currencies/spark-token/",
       "chain_label": "Polygon",
       "market": {
-        "price_usd": 1.00043,
-        "liquidity_usd": 10344.85,
-        "volume_24h_usd": 3867.8,
-        "marketcap_usd": 10004326,
-        "change_24h": 0.1,
-        "buys_24h": 24,
-        "sells_24h": 25,
+        "price_usd": 0.9996,
+        "liquidity_usd": 10341.16,
+        "volume_24h_usd": 3784.79,
+        "marketcap_usd": 9996952,
+        "change_24h": 0,
+        "buys_24h": 23,
+        "sells_24h": 26,
         "dex_url": "https://dexscreener.com/polygon/0x1811b3cd5e08b13397259461d9f0cd8b600db03f"
       },
-      "score": 15,
+      "score": 10,
       "notes": [
         "Wenig Liquidität"
       ],
