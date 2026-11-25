@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T10:40:38.128340+00:00",
+  "updated": "2026-11-25T11:40:42.929094+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -11,18 +11,18 @@
       "source_url": "https://four.meme/token/0x3e17ee3b1895dd1a7cf993a89769c5e029584444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 0.0008537,
-        "liquidity_usd": 200619.99,
-        "volume_24h_usd": 101913.42,
-        "marketcap_usd": 853714,
-        "change_24h": -5.3,
-        "buys_24h": 133,
-        "sells_24h": 97,
+        "price_usd": 0.000849,
+        "liquidity_usd": 199592.81,
+        "volume_24h_usd": 101981.24,
+        "marketcap_usd": 849002,
+        "change_24h": -6.54,
+        "buys_24h": 131,
+        "sells_24h": 98,
         "dex_url": "https://dexscreener.com/bsc/0xf79501dc9a6b78279a5b723fbf2d62234fa0fca6"
       },
       "score": 35,
       "notes": [
-        "Kaufdruck 58%"
+        "Kaufdruck 57%"
       ],
       "breakthrough": true,
       "breakthrough_at": "2026-11-24T20:46:27.408789+00:00"
@@ -37,13 +37,13 @@
       "source_url": "https://coinmarketcap.com/currencies/rocketraccoon/",
       "chain_label": "Solana",
       "market": {
-        "price_usd": 0.0007589,
-        "liquidity_usd": 79205.56,
-        "volume_24h_usd": 81977.98,
-        "marketcap_usd": 734375,
-        "change_24h": -4.73,
-        "buys_24h": 27371,
-        "sells_24h": 25507,
+        "price_usd": 0.0007388,
+        "liquidity_usd": 78192.15,
+        "volume_24h_usd": 83858.59,
+        "marketcap_usd": 714966,
+        "change_24h": -4.23,
+        "buys_24h": 27191,
+        "sells_24h": 25234,
         "dex_url": "https://dexscreener.com/solana/9nlfujwrhgqyxkw2jukka1gjvtibxaty2ad4qrysckke"
       },
       "score": 25,
@@ -61,12 +61,12 @@
       "chain_label": "BNB Chain",
       "market": {
         "price_usd": 5.098e-05,
-        "liquidity_usd": 23428.98,
-        "volume_24h_usd": 521.31,
-        "marketcap_usd": 50385,
-        "change_24h": -4.86,
-        "buys_24h": 13,
-        "sells_24h": 29,
+        "liquidity_usd": 23429.24,
+        "volume_24h_usd": 548.94,
+        "marketcap_usd": 50386,
+        "change_24h": -4.83,
+        "buys_24h": 17,
+        "sells_24h": 30,
         "dex_url": "https://dexscreener.com/bsc/0xd3c8668bff07b02d78019afe7f9a6e581499def2"
       },
       "score": 0,
