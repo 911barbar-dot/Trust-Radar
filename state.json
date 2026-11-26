@@ -1,14 +1,6 @@
 {
-  "last_run": "2026-11-26T20:47:47.966316+00:00",
+  "last_run": "2026-11-26T21:46:35.273569+00:00",
   "watch": {
-    "bsc:0x0a37a4a56706f53d4c0262a487135af9c87e4444": {
-      "first_seen": "2026-11-25T21:41:53.973846+00:00",
-      "alerted": false
-    },
-    "bsc:0x59da35b43734ecb5b24aecd8c76a8d28ed014444": {
-      "first_seen": "2026-11-25T21:41:53.973846+00:00",
-      "alerted": false
-    },
     "bsc:0xce645bfaafb98234c89f97513bf213cff1c34444": {
       "first_seen": "2026-11-25T23:32:19.677414+00:00",
       "alerted": false

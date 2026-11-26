@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T20:47:47.966316+00:00",
+  "updated": "2026-11-26T21:46:35.273569+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -475,16 +475,16 @@
       "source_url": "https://coinmarketcap.com/currencies/bitcoin-hyper-com/",
       "chain_label": "Ethereum",
       "market": {
-        "price_usd": 0.0004071,
-        "liquidity_usd": 140533.83,
-        "volume_24h_usd": 546412.68,
-        "marketcap_usd": 8549998,
-        "change_24h": -96.96,
-        "buys_24h": 1486,
-        "sells_24h": 2087,
+        "price_usd": 0.0004123,
+        "liquidity_usd": 141643.93,
+        "volume_24h_usd": 558109.99,
+        "marketcap_usd": 8658478,
+        "change_24h": -96.93,
+        "buys_24h": 1550,
+        "sells_24h": 2126,
         "dex_url": "https://dexscreener.com/ethereum/0x96d26bd94618b3c7648574ae778e942abbcda698"
       },
-      "score": 38,
+      "score": 39,
       "notes": [
         "Starker Preiseinbruch"
       ],
