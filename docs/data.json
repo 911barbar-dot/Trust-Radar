@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T11:38:52.265605+00:00",
+  "updated": "2026-11-26T12:47:12.593897+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -474,16 +474,16 @@
       "source_url": "https://coinmarketcap.com/currencies/ishares-expanded-tech-software-sector-etf-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 91.92,
+        "price_usd": 43108.016,
         "liquidity_usd": 0,
-        "volume_24h_usd": 3803.6,
-        "marketcap_usd": 343898,
-        "change_24h": -14.14,
+        "volume_24h_usd": 0,
+        "marketcap_usd": 161269391,
+        "change_24h": 0,
         "buys_24h": 0,
-        "sells_24h": 13,
-        "dex_url": "https://dexscreener.com/bsc/0x13472833690183f31312144954e0ea3f0a620cc3966157a76669e0b796f88b37"
+        "sells_24h": 0,
+        "dex_url": "https://dexscreener.com/bsc/0xe06ea959efb3b982b6bd9cba1902eedd2f63722c6b12f4ea4ee16c31545c4a8a"
       },
-      "score": 5,
+      "score": 20,
       "notes": [],
       "breakthrough": false
     },
@@ -522,14 +522,14 @@
       "source_url": "https://coinmarketcap.com/currencies/ishares-future-ai-tech-etf-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 53.66,
-        "liquidity_usd": 499.72,
-        "volume_24h_usd": 295.6,
-        "marketcap_usd": 351381,
-        "change_24h": 0.97,
-        "buys_24h": 2,
-        "sells_24h": 1,
-        "dex_url": "https://dexscreener.com/bsc/0xa69ea851439a3fd3273741cfd8a24b20d7d03a1d920379194b6dd01ab9f69b14"
+        "price_usd": 47.99,
+        "liquidity_usd": 358.97,
+        "volume_24h_usd": 0,
+        "marketcap_usd": 314231,
+        "change_24h": 0,
+        "buys_24h": 0,
+        "sells_24h": 0,
+        "dex_url": "https://dexscreener.com/bsc/0xb5a6f49dffea20e5d33deb668e9ac7d9def5d8e6e80003a4d8bdda8ddc33ed5c"
       },
       "score": 5,
       "notes": [
@@ -2031,7 +2031,7 @@
   "stats": {
     "cmc_found": 65,
     "fourmeme_requests": 29,
-    "fourmeme_errors": 0,
+    "fourmeme_errors": 1,
     "fourmeme_found": 0
   }
 }
