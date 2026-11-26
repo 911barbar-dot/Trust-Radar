@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T09:22:33.144718+00:00",
+  "updated": "2026-11-26T10:30:18.461002+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -477,7 +477,7 @@
         "price_usd": 91.92,
         "liquidity_usd": 0,
         "volume_24h_usd": 3803.6,
-        "marketcap_usd": 346319,
+        "marketcap_usd": 343898,
         "change_24h": -14.14,
         "buys_24h": 0,
         "sells_24h": 13,
@@ -525,7 +525,7 @@
         "price_usd": 53.66,
         "liquidity_usd": 499.72,
         "volume_24h_usd": 295.6,
-        "marketcap_usd": 354657,
+        "marketcap_usd": 351381,
         "change_24h": 0.97,
         "buys_24h": 2,
         "sells_24h": 1,
@@ -550,7 +550,7 @@
         "price_usd": 172.17,
         "liquidity_usd": 9649.59,
         "volume_24h_usd": 13046.05,
-        "marketcap_usd": 2441466,
+        "marketcap_usd": 2443823,
         "change_24h": -6.41,
         "buys_24h": 16,
         "sells_24h": 53,
@@ -575,7 +575,7 @@
         "price_usd": 34.72,
         "liquidity_usd": 891.2,
         "volume_24h_usd": 856.22,
-        "marketcap_usd": 375187,
+        "marketcap_usd": 366547,
         "change_24h": -2.63,
         "buys_24h": 6,
         "sells_24h": 11,
