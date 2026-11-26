@@ -1,6 +1,83 @@
 {
-  "updated": "2026-11-26T04:15:51.333940+00:00",
+  "updated": "2026-11-26T05:31:53.888176+00:00",
   "tokens": [
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0xa4e310998eb7f2e6bcca9538c6e3c9e046a34444",
+      "name": "Bin",
+      "symbol": "Bin",
+      "listed_at": "2026-11-26T05:23:23Z",
+      "source_url": "https://four.meme/token/0xa4e310998eb7f2e6bcca9538c6e3c9e046a34444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 4.891e-05,
+        "liquidity_usd": 0,
+        "volume_24h_usd": 148069.92,
+        "marketcap_usd": 48919.95,
+        "change_24h": 1278,
+        "buys_24h": 1343,
+        "sells_24h": 1342,
+        "dex_url": "https://dexscreener.com/bsc/0xa4e310998eb7f2e6bcca9538c6e3c9e046a34444:4meme"
+      },
+      "score": 21,
+      "notes": [],
+      "breakthrough": false
+    },
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0x21ffa2539c2fae7a77593fedf924027118664444",
+      "name": "Bin",
+      "symbol": "Bin",
+      "listed_at": "2026-11-26T05:20:48Z",
+      "source_url": "https://four.meme/token/0x21ffa2539c2fae7a77593fedf924027118664444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 6.052e-10,
+        "liquidity_usd": 0.05,
+        "volume_24h_usd": 23535.08,
+        "marketcap_usd": 0,
+        "change_24h": -100,
+        "buys_24h": 87,
+        "sells_24h": 100,
+        "dex_url": "https://dexscreener.com/bsc/0x22ac8b67f9bbb33c779a3c2c0256b0e0fca4a476"
+      },
+      "score": 3,
+      "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Starker Preiseinbruch",
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0xc5ba9f21582ab19a50f0dcd67ff0f07b55aa4444",
+      "name": "Bin",
+      "symbol": "Bin",
+      "listed_at": "2026-11-26T05:18:23Z",
+      "source_url": "https://four.meme/token/0xc5ba9f21582ab19a50f0dcd67ff0f07b55aa4444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 7.155e-10,
+        "liquidity_usd": 0.07,
+        "volume_24h_usd": 21436.33,
+        "marketcap_usd": 0,
+        "change_24h": -100,
+        "buys_24h": 95,
+        "sells_24h": 105,
+        "dex_url": "https://dexscreener.com/bsc/0xd80a59f64bf60ea328e695b2ce4c55a6269d057e"
+      },
+      "score": 4,
+      "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Starker Preiseinbruch",
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
     {
       "source": "Four.Meme",
       "chain": "bsc",
@@ -1929,7 +2006,7 @@
   "stats": {
     "cmc_found": 65,
     "fourmeme_requests": 29,
-    "fourmeme_errors": 0,
-    "fourmeme_found": 0
+    "fourmeme_errors": 1,
+    "fourmeme_found": 3
   }
 }
