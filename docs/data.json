@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T19:48:07.362605+00:00",
+  "updated": "2026-11-26T20:47:47.966316+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -475,13 +475,13 @@
       "source_url": "https://coinmarketcap.com/currencies/bitcoin-hyper-com/",
       "chain_label": "Ethereum",
       "market": {
-        "price_usd": 0.0004237,
-        "liquidity_usd": 143449.35,
-        "volume_24h_usd": 542255.18,
-        "marketcap_usd": 8898583,
-        "change_24h": -96.84,
-        "buys_24h": 1421,
-        "sells_24h": 2065,
+        "price_usd": 0.0004071,
+        "liquidity_usd": 140533.83,
+        "volume_24h_usd": 546412.68,
+        "marketcap_usd": 8549998,
+        "change_24h": -96.96,
+        "buys_24h": 1486,
+        "sells_24h": 2087,
         "dex_url": "https://dexscreener.com/ethereum/0x96d26bd94618b3c7648574ae778e942abbcda698"
       },
       "score": 38,
@@ -2163,7 +2163,7 @@
   "stats": {
     "cmc_found": 66,
     "fourmeme_requests": 29,
-    "fourmeme_errors": 1,
-    "fourmeme_found": 0
+    "fourmeme_errors": 0,
+    "fourmeme_found": 1
   }
 }
