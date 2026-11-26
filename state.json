@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-26T14:14:41.182881+00:00",
+  "last_run": "2026-11-26T15:22:14.476247+00:00",
   "watch": {
     "tron:tdmqkxg8evqy3gamrxrndtscws7amdgrft": {
       "first_seen": "2026-11-25T16:45:19.996121+00:00",
@@ -40,6 +40,22 @@
     "ethereum:0xa86c39fa8341adc5219f355468fc78cec7e8702b": {
       "first_seen": "2026-11-26T14:14:41.182881+00:00",
       "alerted": true
+    },
+    "bsc:0xb08c177cda40a6ba2e3450e8b2f22748fb164444": {
+      "first_seen": "2026-11-26T15:22:14.476247+00:00",
+      "alerted": false
+    },
+    "bsc:0x66a4fe03164f88ae48b70bc2a1efd23bca064444": {
+      "first_seen": "2026-11-26T15:22:14.476247+00:00",
+      "alerted": false
+    },
+    "bsc:0xda0680ca593dd28f93d0889a50efe9fa6caa4444": {
+      "first_seen": "2026-11-26T15:22:14.476247+00:00",
+      "alerted": false
+    },
+    "bsc:0x85da40eb49822913886617d259fe72ceeadd4444": {
+      "first_seen": "2026-11-26T15:22:14.476247+00:00",
+      "alerted": false
     }
   },
   "telegram_verified": true,
