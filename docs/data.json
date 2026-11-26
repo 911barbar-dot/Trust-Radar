@@ -1,6 +1,31 @@
 {
-  "updated": "2026-11-26T22:49:49.787019+00:00",
+  "updated": "2026-11-26T23:48:44.059475+00:00",
   "tokens": [
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0xf07a8cf9faa7e33d1c20d7701ef9a18b0bf64444",
+      "name": "Ultra Skibidi Moon Cat",
+      "symbol": "CATUSM",
+      "listed_at": "2026-11-26T23:49:02Z",
+      "source_url": "https://four.meme/token/0xf07a8cf9faa7e33d1c20d7701ef9a18b0bf64444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 1.076e-05,
+        "liquidity_usd": 8.46,
+        "volume_24h_usd": 2.57,
+        "marketcap_usd": 113067,
+        "change_24h": 489,
+        "buys_24h": 4,
+        "sells_24h": 0,
+        "dex_url": "https://dexscreener.com/bsc/0x2f5519990485ff1e004cc060405bacded3decbbd"
+      },
+      "score": 10,
+      "notes": [
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
     {
       "source": "Four.Meme",
       "chain": "bsc",
@@ -474,13 +499,13 @@
       "source_url": "https://coinmarketcap.com/currencies/bitcoin-hyper-com/",
       "chain_label": "Ethereum",
       "market": {
-        "price_usd": 0.0004315,
-        "liquidity_usd": 144476.86,
-        "volume_24h_usd": 561778.95,
-        "marketcap_usd": 9063034,
-        "change_24h": -96.78,
-        "buys_24h": 1613,
-        "sells_24h": 2155,
+        "price_usd": 0.0003828,
+        "liquidity_usd": 135613.93,
+        "volume_24h_usd": 568774.07,
+        "marketcap_usd": 8039228,
+        "change_24h": -97.15,
+        "buys_24h": 1644,
+        "sells_24h": 2182,
         "dex_url": "https://dexscreener.com/ethereum/0x96d26bd94618b3c7648574ae778e942abbcda698"
       },
       "score": 39,
@@ -2163,6 +2188,6 @@
     "cmc_found": 66,
     "fourmeme_requests": 29,
     "fourmeme_errors": 0,
-    "fourmeme_found": 0
+    "fourmeme_found": 1
   }
 }
