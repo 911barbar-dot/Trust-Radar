@@ -1,26 +1,6 @@
 {
-  "last_run": "2026-11-26T12:47:12.593897+00:00",
+  "last_run": "2026-11-26T14:14:41.182881+00:00",
   "watch": {
-    "bsc:0x3f9550a5355e11c4c4e24a82e47b53a4a5d1e17d": {
-      "first_seen": "2026-11-25T12:48:48.690924+00:00",
-      "alerted": false
-    },
-    "bsc:0xcd1e9a6d7416674347c44e7a95b1f5954540fffd": {
-      "first_seen": "2026-11-25T12:48:48.690924+00:00",
-      "alerted": false
-    },
-    "bsc:0x4c7ae9c293641cd1530ba3ab1b14ef004193e928": {
-      "first_seen": "2026-11-25T12:48:48.690924+00:00",
-      "alerted": false
-    },
-    "bsc:0x091d185e0702131a3047beb6460454f43d667e80": {
-      "first_seen": "2026-11-25T12:48:48.690924+00:00",
-      "alerted": false
-    },
-    "bsc:0x2480a1b8e5f68752fe880fba96e5517369a5f6a1": {
-      "first_seen": "2026-11-25T12:48:48.690924+00:00",
-      "alerted": false
-    },
     "tron:tdmqkxg8evqy3gamrxrndtscws7amdgrft": {
       "first_seen": "2026-11-25T16:45:19.996121+00:00",
       "alerted": false
@@ -56,6 +36,10 @@
     "bsc:0x92f412618d11f748c22855a040431d30397f4444": {
       "first_seen": "2026-11-26T06:40:55.600618+00:00",
       "alerted": false
+    },
+    "ethereum:0xa86c39fa8341adc5219f355468fc78cec7e8702b": {
+      "first_seen": "2026-11-26T14:14:41.182881+00:00",
+      "alerted": true
     }
   },
   "telegram_verified": true,
