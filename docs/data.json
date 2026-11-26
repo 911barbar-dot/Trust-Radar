@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T08:10:36.421967+00:00",
+  "updated": "2026-11-26T09:22:33.144718+00:00",
   "tokens": [
     {
       "source": "Four.Meme",
@@ -2031,7 +2031,7 @@
   "stats": {
     "cmc_found": 65,
     "fourmeme_requests": 29,
-    "fourmeme_errors": 0,
+    "fourmeme_errors": 1,
     "fourmeme_found": 0
   }
 }
