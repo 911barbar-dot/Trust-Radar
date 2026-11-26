@@ -1,6 +1,33 @@
 {
-  "updated": "2026-11-26T05:31:53.888176+00:00",
+  "updated": "2026-11-26T06:40:55.600618+00:00",
   "tokens": [
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0x92f412618d11f748c22855a040431d30397f4444",
+      "name": "Bin",
+      "symbol": "Bin",
+      "listed_at": "2026-11-26T05:41:12Z",
+      "source_url": "https://four.meme/token/0x92f412618d11f748c22855a040431d30397f4444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 6.992e-10,
+        "liquidity_usd": 0.07,
+        "volume_24h_usd": 23104.68,
+        "marketcap_usd": 0,
+        "change_24h": -100,
+        "buys_24h": 96,
+        "sells_24h": 104,
+        "dex_url": "https://dexscreener.com/bsc/0x33ba1011b0714e7d3ab3c3ff9e65b5121fe1ab55"
+      },
+      "score": 4,
+      "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Starker Preiseinbruch",
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
     {
       "source": "Four.Meme",
       "chain": "bsc",
@@ -169,20 +196,18 @@
       "source_url": "https://four.meme/token/0x59da35b43734ecb5b24aecd8c76a8d28ed014444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 8.386e-10,
-        "liquidity_usd": 0.01,
+        "price_usd": 8.825e-10,
+        "liquidity_usd": 0,
         "volume_24h_usd": 0.41,
         "marketcap_usd": 2,
-        "change_24h": -99.16,
-        "buys_24h": 5,
+        "change_24h": -99.11,
+        "buys_24h": 6,
         "sells_24h": 4,
         "dex_url": "https://dexscreener.com/bsc/0x6a7c6843cccb763411cad440568b81f68623a0daddfcbc976ad1df77c35bbf3a"
       },
       "score": 0,
       "notes": [
-        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
-        "Starker Preiseinbruch",
-        "Wenig Liquidität"
+        "Starker Preiseinbruch"
       ],
       "breakthrough": false
     },
@@ -472,13 +497,13 @@
       "source_url": "https://coinmarketcap.com/currencies/ishares-semiconductor-etf-tokenized-bstocks/",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 110.0093,
-        "liquidity_usd": 426.54,
-        "volume_24h_usd": 0,
-        "marketcap_usd": 728941,
-        "change_24h": 0,
-        "buys_24h": 0,
-        "sells_24h": 0,
+        "price_usd": 110.059,
+        "liquidity_usd": 426.63,
+        "volume_24h_usd": 0.5,
+        "marketcap_usd": 831657,
+        "change_24h": -0.01,
+        "buys_24h": 1,
+        "sells_24h": 2,
         "dex_url": "https://dexscreener.com/bsc/0x61bb391bab75281995161d249389aadd3e1f448b0611407589a202b297349b52"
       },
       "score": 5,
@@ -2006,7 +2031,7 @@
   "stats": {
     "cmc_found": 65,
     "fourmeme_requests": 29,
-    "fourmeme_errors": 1,
-    "fourmeme_found": 3
+    "fourmeme_errors": 2,
+    "fourmeme_found": 1
   }
 }
