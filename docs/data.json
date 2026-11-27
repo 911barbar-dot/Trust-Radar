@@ -1,6 +1,60 @@
 {
-  "updated": "2026-11-26T23:48:44.059475+00:00",
+  "updated": "2026-11-27T01:00:13.080171+00:00",
   "tokens": [
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0x9f25fc85f4fd7bdb45794ad3d1361a0301034444",
+      "name": "NoCap Cooked Wrapped Bitcoin",
+      "symbol": "capWBTC",
+      "listed_at": "2026-11-27T00:20:17Z",
+      "source_url": "https://four.meme/token/0x9f25fc85f4fd7bdb45794ad3d1361a0301034444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 2.026e-08,
+        "liquidity_usd": 0.14,
+        "volume_24h_usd": 27.33,
+        "marketcap_usd": 213,
+        "change_24h": -99.92,
+        "buys_24h": 43,
+        "sells_24h": 10,
+        "dex_url": "https://dexscreener.com/bsc/0xc2379c69572391f9945bfda39af30f655bd3b892"
+      },
+      "score": 0,
+      "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Starker Preiseinbruch",
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
+    {
+      "source": "Four.Meme",
+      "chain": "bsc",
+      "address": "0xe4ad8acf8c16271c1d19a5a70308083fee8b4444",
+      "name": "Chopped  Alpha Wrapped Bitcoin",
+      "symbol": "choWBTC",
+      "listed_at": "2026-11-27T00:02:40Z",
+      "source_url": "https://four.meme/token/0xe4ad8acf8c16271c1d19a5a70308083fee8b4444",
+      "chain_label": "BNB Chain",
+      "market": {
+        "price_usd": 2.106e-08,
+        "liquidity_usd": 0.21,
+        "volume_24h_usd": 27.9,
+        "marketcap_usd": 221,
+        "change_24h": -99.96,
+        "buys_24h": 39,
+        "sells_24h": 9,
+        "dex_url": "https://dexscreener.com/bsc/0xd5f396114a02739dd0e4bec0a8836db56c1f170e"
+      },
+      "score": 0,
+      "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Starker Preiseinbruch",
+        "Wenig Liquidität"
+      ],
+      "breakthrough": false
+    },
     {
       "source": "Four.Meme",
       "chain": "bsc",
@@ -11,17 +65,19 @@
       "source_url": "https://four.meme/token/0xf07a8cf9faa7e33d1c20d7701ef9a18b0bf64444",
       "chain_label": "BNB Chain",
       "market": {
-        "price_usd": 1.076e-05,
-        "liquidity_usd": 8.46,
-        "volume_24h_usd": 2.57,
-        "marketcap_usd": 113067,
-        "change_24h": 489,
-        "buys_24h": 4,
-        "sells_24h": 0,
+        "price_usd": 9.312e-09,
+        "liquidity_usd": 0.25,
+        "volume_24h_usd": 13.75,
+        "marketcap_usd": 98,
+        "change_24h": -99.49,
+        "buys_24h": 30,
+        "sells_24h": 5,
         "dex_url": "https://dexscreener.com/bsc/0x2f5519990485ff1e004cc060405bacded3decbbd"
       },
-      "score": 10,
+      "score": 0,
       "notes": [
+        "Volumen sehr hoch im Verhältnis zur Liquidität, Vorsicht",
+        "Starker Preiseinbruch",
         "Wenig Liquidität"
       ],
       "breakthrough": false
@@ -499,13 +555,13 @@
       "source_url": "https://coinmarketcap.com/currencies/bitcoin-hyper-com/",
       "chain_label": "Ethereum",
       "market": {
-        "price_usd": 0.0003828,
-        "liquidity_usd": 135613.93,
-        "volume_24h_usd": 568774.07,
-        "marketcap_usd": 8039228,
-        "change_24h": -97.15,
-        "buys_24h": 1644,
-        "sells_24h": 2182,
+        "price_usd": 0.0003774,
+        "liquidity_usd": 135287.67,
+        "volume_24h_usd": 570385.19,
+        "marketcap_usd": 7926329,
+        "change_24h": -97.19,
+        "buys_24h": 1671,
+        "sells_24h": 2202,
         "dex_url": "https://dexscreener.com/ethereum/0x96d26bd94618b3c7648574ae778e942abbcda698"
       },
       "score": 39,
@@ -2187,7 +2243,7 @@
   "stats": {
     "cmc_found": 66,
     "fourmeme_requests": 29,
-    "fourmeme_errors": 0,
-    "fourmeme_found": 1
+    "fourmeme_errors": 1,
+    "fourmeme_found": 3
   }
 }
