@@ -2,7 +2,8 @@
 Trust Radar Scanner
 Findet neue Coins, die in Trust Wallet sichtbar und handelbar werden:
   1. Neu bei CoinMarketCap gelistet (Trust Wallet bezieht seine Preise von CMC)
-  2. Four.Meme Graduierungen auf PancakeSwap (direkt in Trust Wallet handelbar)
+  2. Graduierte Meme Coins: Pump.fun auf PumpSwap (Solana) und BNB Meme Coins auf PancakeSwap
+  3. Neue Coin Profile und Boosts bei DexScreener (Solana und BNB)
 Jeder Kandidat wird 24 Stunden beobachtet. Sobald er die Schwellenwerte erreicht,
 kommt eine Telegram Nachricht.
 """
@@ -27,6 +28,7 @@ WATCH_HOURS = float(os.getenv("WATCH_HOURS", "24"))
 SOURCES = [s.strip() for s in os.getenv("SOURCES", "cmc,fourmeme").split(",") if s.strip()]
 FOURMEME_SUFFIXES = [s.strip().lower() for s in os.getenv("FOURMEME_SUFFIXES", "4444").split(",") if s.strip()]
 GT_PAGES = int(os.getenv("GECKOTERMINAL_PAGES", "10"))
+MAX_PAIR_AGE_HOURS = float(os.getenv("MAX_PAIR_AGE_HOURS", "72"))  # Meme Coins: nur wirklich neue Coins melden
 
 CMC_KEY = os.getenv("CMC_API_KEY", "")
 TG_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
@@ -124,23 +126,34 @@ def source_cmc():
     return out
 
 
-# ---------- Quelle 2: Four.Meme Graduierungen ----------
-# Four.Meme Token enden auf 4444 und wechseln nach dem Graduieren zu PancakeSwap.
-# Wir suchen über GeckoTerminal an drei Stellen, damit auch bei stündlichen Läufen nichts verloren geht:
-#   a) PancakeSwap Pools mit dem höchsten 24h Volumen (genau dort sind die Durchbrüche)
-#   b) Trending Pools auf BNB Chain
-#   c) Neueste Pools
+# ---------- Quelle 2: Meme Coins auf Solana (Pump.fun) und BNB Chain ----------
+# Pump.fun Coins wechseln nach dem Graduieren auf PumpSwap, BNB Meme Coins (z. B. Four.Meme) auf PancakeSwap.
+# Über GeckoTerminal holen wir die jüngsten Pools dieser Börsen, sortiert nach Volumen, plus Trending und Neueste.
+# So gehen auch bei stündlichen Läufen keine starken Coins verloren.
 
-GT = "https://api.geckoterminal.com/api/v2/networks/bsc"
+GT = "https://api.geckoterminal.com/api/v2/networks"
+MEME_NETWORKS = {
+    # Netzwerk: (DexScreener chainId, Suchwort für die Börse, Ersatz Börsen IDs, Quellenname)
+    "solana": ("solana", "pumpswap", ["pumpswap"], "Pump.fun"),
+    "bsc": ("bsc", "pancakeswap", ["pancakeswap_v2", "pancakeswap-v3-bsc"], "BNB Meme"),
+}
+QUOTE_TOKENS = {
+    "so11111111111111111111111111111111111111112", "epjfwdd5aufqssqem2qn1xzybapc8g4wegggkzwytdt1v",
+    "es9vmfrzacermjfrf4h2fyd4kcomky11mcce8benwnyb",
+    "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", "0x55d398326f99059ff775485246999027b3197955",
+    "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d", "0xe9e7cea3dedca5984780bafc599bd69add087d56",
+    "0xc5f0f7b66764f6ec8c8dff7ba683102295e16409", "0x2170ed0880ac9a755fd29b2688956bd959f933f8",
+    "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c",
+}
 
 
-def _parse_pools(body, cutoff, only_pancake=True):
+def _parse_pools(body, cutoff, dex_ids, network, label):
     tokens = {t["id"]: t["attributes"] for t in body.get("included", []) if t.get("type") == "token"}
     out = []
     for p in body.get("data", []):
         rel = p.get("relationships", {})
         dex = (rel.get("dex", {}).get("data") or {}).get("id", "")
-        if only_pancake and "pancakeswap" not in dex:
+        if dex not in dex_ids:
             continue
         created = p.get("attributes", {}).get("pool_created_at")
         if created:
@@ -151,31 +164,34 @@ def _parse_pools(body, cutoff, only_pancake=True):
                 pass
         for side in ("base_token", "quote_token"):
             tok_id = (rel.get(side, {}).get("data") or {}).get("id", "")
-            addr = (tokens.get(tok_id, {}).get("address") or tok_id.split("_", 1)[-1])
-            if addr and any(addr.lower().endswith(s) for s in FOURMEME_SUFFIXES):
-                tok = tokens.get(tok_id, {})
-                out.append({
-                    "source": "Four.Meme",
-                    "chain": "bsc",
-                    "address": addr,
-                    "name": tok.get("name") or p["attributes"].get("name", "?").split(" / ")[0],
-                    "symbol": tok.get("symbol") or p["attributes"].get("name", "?").split(" / ")[0],
-                    "listed_at": created or datetime.now(timezone.utc).isoformat(),
-                    "source_url": f"https://four.meme/token/{addr}",
-                })
-                break
+            tok = tokens.get(tok_id, {})
+            addr = tok.get("address") or tok_id.split("_", 1)[-1]
+            if not addr or addr.lower() in QUOTE_TOKENS:
+                continue
+            chain = MEME_NETWORKS[network][0]
+            out.append({
+                "source": label,
+                "chain": chain,
+                "address": addr,
+                "name": tok.get("name") or p["attributes"].get("name", "?").split(" / ")[0],
+                "symbol": tok.get("symbol") or p["attributes"].get("name", "?").split(" / ")[0],
+                "listed_at": created or datetime.now(timezone.utc).isoformat(),
+                "source_url": (f"https://pump.fun/coin/{addr}" if network == "solana"
+                               else f"https://dexscreener.com/{chain}/{addr}"),
+            })
+            break
     return out
 
 
-def source_fourmeme():
+def source_memes():
     cutoff = datetime.now(timezone.utc) - timedelta(hours=WATCH_HOURS)
     inc = {"include": "base_token,quote_token"}
-    requests_done, errors, found = 0, 0, {}
+    done, errors, found = 0, 0, {}
 
     def fetch(url, params):
-        nonlocal requests_done, errors
+        nonlocal done, errors
         r = get(url, params=params)
-        requests_done += 1
+        done += 1
         time.sleep(2.2)  # GeckoTerminal erlaubt 30 Abfragen pro Minute
         if not r or r.status_code != 200:
             errors += 1
@@ -183,35 +199,70 @@ def source_fourmeme():
             return None
         return r.json()
 
-    # PancakeSwap Börsen auf BNB Chain ermitteln
-    dexes = []
-    body = fetch(f"{GT}/dexes", {"page": 1})
-    if body:
-        dexes = [d["id"] for d in body.get("data", []) if "pancakeswap" in d.get("id", "")]
-    if not dexes:
-        dexes = ["pancakeswap_v2", "pancakeswap-v3-bsc"]
-    print("PancakeSwap Börsen:", dexes)
+    for network, (_, keyword, fallback, label) in MEME_NETWORKS.items():
+        dex_ids = []
+        for page in range(1, 4):
+            body = fetch(f"{GT}/{network}/dexes", {"page": page})
+            if not body or not body.get("data"):
+                break
+            dex_ids += [d["id"] for d in body["data"] if keyword in d.get("id", "")]
+            if dex_ids:
+                break
+        dex_ids = dex_ids or fallback
+        print(f"{label} Börsen:", dex_ids)
 
-    jobs = []
-    for dex in dexes[:3]:
-        for page in range(1, 6):
-            jobs.append((f"{GT}/dexes/{dex}/pools", {**inc, "page": page, "sort": "h24_volume_usd_desc"}, True))
-    for dur in ("1h", "6h", "24h"):
-        jobs.append((f"{GT}/trending_pools", {**inc, "page": 1, "duration": dur}, True))
-    for page in range(1, GT_PAGES + 1):
-        jobs.append((f"{GT}/new_pools", {**inc, "page": page}, True))
+        jobs = []
+        for dex in dex_ids[:2]:
+            for page in range(1, 4):
+                jobs.append((f"{GT}/{network}/dexes/{dex}/pools",
+                             {**inc, "page": page, "sort": "h24_volume_usd_desc"}))
+        for dur in ("1h", "6h"):
+            jobs.append((f"{GT}/{network}/trending_pools", {**inc, "page": 1, "duration": dur}))
+        for page in range(1, 4):
+            jobs.append((f"{GT}/{network}/new_pools", {**inc, "page": page}))
 
-    for url, params, only_pancake in jobs:
-        body = fetch(url, params)
-        if body:
-            for c in _parse_pools(body, cutoff, only_pancake):
-                found.setdefault(c["address"].lower(), c)
+        n_before = len(found)
+        for url, params in jobs:
+            body = fetch(url, params)
+            if body:
+                for c in _parse_pools(body, cutoff, set(dex_ids), network, label):
+                    found.setdefault(f"{c['chain']}:{c['address'].lower()}", c)
+        STATS[f"{label}_found"] = len(found) - n_before
 
-    STATS["fourmeme_requests"] = requests_done
-    STATS["fourmeme_errors"] = errors
-    STATS["fourmeme_found"] = len(found)
-    print(f"Four.Meme: {len(found)} Kandidaten ({requests_done} Abfragen, {errors} Fehler)")
+    STATS["gecko_requests"] = done
+    STATS["gecko_errors"] = errors
+    print(f"Meme Coins: {len(found)} Kandidaten ({done} Abfragen, {errors} Fehler)")
     return list(found.values())
+
+
+# ---------- Quelle 3: DexScreener Profile und Boosts (Solana und BNB) ----------
+
+def source_dexscreener():
+    out, seen = [], set()
+    for path in ("token-profiles/latest/v1", "token-boosts/latest/v1", "token-boosts/top/v1"):
+        r = get(f"https://api.dexscreener.com/{path}")
+        if not r or r.status_code != 200:
+            print("DexScreener Fehler:", path)
+            continue
+        items = r.json() if isinstance(r.json(), list) else []
+        for it in items:
+            chain, addr = it.get("chainId"), it.get("tokenAddress")
+            if chain not in ("solana", "bsc") or not addr or (chain, addr.lower()) in seen:
+                continue
+            seen.add((chain, addr.lower()))
+            out.append({
+                "source": "DexScreener",
+                "chain": chain,
+                "address": addr,
+                "name": "?",
+                "symbol": "?",
+                "listed_at": datetime.now(timezone.utc).isoformat(),
+                "source_url": it.get("url") or f"https://dexscreener.com/{chain}/{addr}",
+            })
+        time.sleep(0.5)
+    STATS["DexScreener_found"] = len(out)
+    print(f"DexScreener: {len(out)} Kandidaten")
+    return out
 
 
 # ---------- Marktdaten (DexScreener, bis 30 Adressen pro Abfrage) ----------
@@ -243,6 +294,9 @@ def fetch_markets(chain, addresses):
                 "buys_24h": tx.get("buys", 0),
                 "sells_24h": tx.get("sells", 0),
                 "dex_url": best.get("url"),
+                "pair_age_hours": round((time.time() * 1000 - min(p.get("pairCreatedAt") or time.time() * 1000 for p in ps)) / 3_600_000, 1),
+                "token_name": (best.get("baseToken") or {}).get("name"),
+                "token_symbol": (best.get("baseToken") or {}).get("symbol"),
             }
         time.sleep(0.5)
     return result
@@ -328,8 +382,11 @@ def status_text(title, watch, data):
              f"Durchbrüche gesamt: {hot}",
              f"CoinMarketCap: {STATS.get('cmc_found', 0)} Kandidaten"
              + (f" (Fehler {STATS['cmc_error']})" if "cmc_error" in STATS else ""),
-             f"Four.Meme: {STATS.get('fourmeme_found', 0)} Kandidaten"
-             + (f" ({STATS['fourmeme_errors']} Fehler)" if STATS.get("fourmeme_errors") else "")]
+             f"Pump.fun (Solana): {STATS.get('Pump.fun_found', 0)} Kandidaten",
+             f"BNB Meme: {STATS.get('BNB Meme_found', 0)} Kandidaten",
+             f"DexScreener: {STATS.get('DexScreener_found', 0)} Kandidaten"]
+    if STATS.get("gecko_errors"):
+        lines.append(f"⚠️ GeckoTerminal: {STATS['gecko_errors']} Fehler")
     return "\n".join(lines)
 
 
@@ -372,8 +429,10 @@ def main():
     candidates = []
     if "cmc" in SOURCES:
         candidates += source_cmc()
-    if "fourmeme" in SOURCES:
-        candidates += source_fourmeme()
+    if "fourmeme" in SOURCES or "memes" in SOURCES:
+        candidates += source_memes()
+    if "fourmeme" in SOURCES or "dexscreener" in SOURCES:
+        candidates += source_dexscreener()
 
     entries = {f"{t['chain']}:{t['address'].lower()}": t for t in data["tokens"]}
     for c in candidates:
@@ -401,9 +460,15 @@ def main():
             key = f"{chain}:{addr.lower()}"
             e = entries[key]
             e["market"] = markets.get(addr.lower()) or e.get("market")
+            m = e["market"] or {}
+            if e.get("name") in (None, "?") and m.get("token_name"):
+                e["name"], e["symbol"] = m["token_name"], m.get("token_symbol") or "?"
             e["score"], e["notes"] = score(e["market"])
-            e["breakthrough"] = e["breakthrough"] or is_breakthrough(e["market"])
-            if is_breakthrough(e["market"]) and not watch[key]["alerted"]:
+            too_old = (e["source"] != "CoinMarketCap" and m.get("pair_age_hours") is not None
+                       and m["pair_age_hours"] > MAX_PAIR_AGE_HOURS)
+            hit = is_breakthrough(e["market"]) and not too_old
+            e["breakthrough"] = e["breakthrough"] or hit
+            if hit and not watch[key]["alerted"]:
                 watch[key]["alerted"] = True
                 e["breakthrough_at"] = now.isoformat()
                 if not first_run:  # beim allerersten Lauf keine Nachrichtenflut
@@ -416,8 +481,11 @@ def main():
                         "min_marketcap": MIN_MARKETCAP, "watch_hours": WATCH_HOURS}
     # Testnachricht nach dem Update und tägliche Statusmeldung ab 08:00 Uhr Schweizer Zeit
     local = now.astimezone(ZoneInfo("Europe/Zurich"))
+    if state.get("version") != 3:  # einmalige Bestätigung nach diesem Update
+        state["version"] = 3
+        state["telegram_verified"] = False
     if not state.get("telegram_verified"):
-        if tg_send(status_text("✅ Trust Radar ist verbunden", watch, data)):
+        if tg_send(status_text("✅ Trust Radar läuft (neue Version mit Solana und BNB)", watch, data)):
             state["telegram_verified"] = True
     elif local.hour >= 8 and state.get("last_status_day") != local.date().isoformat():
         if tg_send(status_text("📊 Tagesstatus Trust Radar", watch, data)):
