@@ -1,5 +1,5 @@
 {
-  "last_run": "2026-11-27T11:50:44.301509+00:00",
+  "last_run": "2026-11-27T13:01:40.573208+00:00",
   "watch": {
     "ethereum:0xa86c39fa8341adc5219f355468fc78cec7e8702b": {
       "first_seen": "2026-11-26T14:14:41.182881+00:00",
@@ -31,6 +31,10 @@
     },
     "bsc:0xe4ad8acf8c16271c1d19a5a70308083fee8b4444": {
       "first_seen": "2026-11-27T01:00:13.080171+00:00",
+      "alerted": false
+    },
+    "solana:5kqi4kdq56h9ufhq14jxtmy189zpyxaydxcq4qhvdthw": {
+      "first_seen": "2026-11-27T13:01:40.573208+00:00",
       "alerted": false
     }
   },
