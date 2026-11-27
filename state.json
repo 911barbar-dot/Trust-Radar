@@ -1,10 +1,6 @@
 {
-  "last_run": "2026-11-27T05:56:42.317765+00:00",
+  "last_run": "2026-11-27T07:09:54.691016+00:00",
   "watch": {
-    "bsc:0x92f412618d11f748c22855a040431d30397f4444": {
-      "first_seen": "2026-11-26T06:40:55.600618+00:00",
-      "alerted": false
-    },
     "ethereum:0xa86c39fa8341adc5219f355468fc78cec7e8702b": {
       "first_seen": "2026-11-26T14:14:41.182881+00:00",
       "alerted": true
@@ -39,5 +35,5 @@
     }
   },
   "telegram_verified": true,
-  "last_status_day": "2026-11-26"
+  "last_status_day": "2026-11-27"
 }
