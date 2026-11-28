@@ -1,23 +1,11 @@
 {
-  "last_run": "2026-11-28T09:19:01.702055+00:00",
+  "last_run": "2026-11-28T10:20:19.842713+00:00",
   "watch": {
     "solana:5kqi4kdq56h9ufhq14jxtmy189zpyxaydxcq4qhvdthw": {
       "first_seen": "2026-11-27T13:01:40.573208+00:00",
       "alerted": false
     },
     "solana:bsdb4nsjg93x47n3pavvf9cdutvuj4ei7ca3t5h6p6cy": {
-      "first_seen": "2026-11-27T13:08:22.069509+00:00",
-      "alerted": false
-    },
-    "solana:a2mkrc2rbbxgf63av2knjia3jtqybm5unzqyrsnrarvg": {
-      "first_seen": "2026-11-27T13:08:22.069509+00:00",
-      "alerted": false
-    },
-    "solana:arlygwctbyfiwtchmxgxkacedc6f5scavnyub9eapwwr": {
-      "first_seen": "2026-11-27T13:08:22.069509+00:00",
-      "alerted": false
-    },
-    "solana:dgfryxdmaxvvwxmjnpqcv1czijtszeerwdfegtdfrdgc": {
       "first_seen": "2026-11-27T13:08:22.069509+00:00",
       "alerted": false
     },
@@ -46,14 +34,6 @@
       "alerted": false
     },
     "bsc:0x2251f55ca2bbc612f35a8af976598038aebb6ce6": {
-      "first_seen": "2026-11-27T13:08:22.069509+00:00",
-      "alerted": false
-    },
-    "bsc:0x83f8e4b77577eb346812551ee8dc2e0a8d13f506": {
-      "first_seen": "2026-11-27T13:08:22.069509+00:00",
-      "alerted": false
-    },
-    "bsc:0x5a0b30b7a8ea4490ed7a67ac2f8c16b971247648": {
       "first_seen": "2026-11-27T13:08:22.069509+00:00",
       "alerted": false
     },
@@ -188,10 +168,6 @@
     "solana:b9wbjdj4fbhmszmoxakjstawuepajukbysvnk5zapump": {
       "first_seen": "2026-11-27T16:37:40.357345+00:00",
       "alerted": true
-    },
-    "solana:9mslfyfxbrsbrapczapupmcnmpqntel1vpkh1aeypump": {
-      "first_seen": "2026-11-27T16:37:40.357345+00:00",
-      "alerted": false
     },
     "ethereum:0xf1f558c95b14ad95d4da1822770dc4ff0f1bcc30": {
       "first_seen": "2026-11-27T17:37:08.486717+00:00",
@@ -357,27 +333,11 @@
       "first_seen": "2026-11-27T17:37:08.486717+00:00",
       "alerted": false
     },
-    "solana:5q6dkfforcgdqndgqnf7tpuacfnym8vm4k2nfb7fpump": {
-      "first_seen": "2026-11-27T17:37:08.486717+00:00",
-      "alerted": false
-    },
     "solana:hap9fcxubd88sjrhmy1kr5iukprzgemagcbam3vtpump": {
       "first_seen": "2026-11-27T17:37:08.486717+00:00",
       "alerted": false
     },
-    "solana:d1prxpsrw3zxlw1uaak9buz4zpixkwtykzhg681xmb5i": {
-      "first_seen": "2026-11-27T17:37:08.486717+00:00",
-      "alerted": false
-    },
-    "solana:7acq9bghpct33twc6yaxlx5cfnqbbfachy9xkd7spump": {
-      "first_seen": "2026-11-27T17:37:08.486717+00:00",
-      "alerted": false
-    },
     "solana:85cqsfgbi8mbzxipppbppxuv7j1ha8tbwhjf4gkw6mhg": {
-      "first_seen": "2026-11-27T17:37:08.486717+00:00",
-      "alerted": false
-    },
-    "solana:cvcvtn9yfswizy3dydpkjjtyup3hpgc9u7fx1yzupump": {
       "first_seen": "2026-11-27T17:37:08.486717+00:00",
       "alerted": false
     },
@@ -430,10 +390,6 @@
       "alerted": false
     },
     "solana:3ysnxhcyymmnr8vpthb8j6gdcynfqmqtejyuc7afaawk": {
-      "first_seen": "2026-11-27T20:38:12.671244+00:00",
-      "alerted": false
-    },
-    "solana:dqgssx5yev5cnz8jb9bomgfthvuazet3fmmmrrcmfiha": {
       "first_seen": "2026-11-27T20:38:12.671244+00:00",
       "alerted": false
     },
@@ -541,39 +497,7 @@
       "first_seen": "2026-11-28T00:34:47.526349+00:00",
       "alerted": false
     },
-    "solana:9g9ssh55szeonifjmrmefug9fby67buvhzwaxb5ypump": {
-      "first_seen": "2026-11-28T00:34:47.526349+00:00",
-      "alerted": true
-    },
-    "solana:dzyw58ezjejarj8r9xlt7e7mnnfzc7pztrnpicbbborn": {
-      "first_seen": "2026-11-28T00:34:47.526349+00:00",
-      "alerted": false
-    },
-    "solana:vicewireowxwmrrfgmwmpp1ffdb8jm8pzzchvj9dvg6": {
-      "first_seen": "2026-11-28T00:34:47.526349+00:00",
-      "alerted": false
-    },
-    "solana:14ssx1h9qge5qe3meqk87hygfkmhbqnhxjehgxkspump": {
-      "first_seen": "2026-11-28T00:34:47.526349+00:00",
-      "alerted": false
-    },
-    "solana:ccoebe5japkfnym8cnnddzpzdylpdb1p99hyp2lfm4sm": {
-      "first_seen": "2026-11-28T00:34:47.526349+00:00",
-      "alerted": false
-    },
-    "solana:avvxpcvph4ptj5urfhetpkdzyh8o4uw7cawua2mk8hft": {
-      "first_seen": "2026-11-28T00:34:47.526349+00:00",
-      "alerted": false
-    },
-    "solana:2qhwyd7qwhbsovnmrsrxzvcw5ge36h1kxg6j6rwcpump": {
-      "first_seen": "2026-11-28T00:34:47.526349+00:00",
-      "alerted": false
-    },
     "solana:856eo2q9frc5wb9gxafpur4sdahiod3bp6z6bgbopump": {
-      "first_seen": "2026-11-28T00:34:47.526349+00:00",
-      "alerted": false
-    },
-    "solana:52gfzmrzvjq6vhs6nnqn8basal2aiy5aywopc4yfpump": {
       "first_seen": "2026-11-28T00:34:47.526349+00:00",
       "alerted": false
     },
@@ -597,170 +521,6 @@
       "first_seen": "2026-11-28T01:59:52.358709+00:00",
       "alerted": false
     },
-    "solana:fswtupndququ5xcjvu5yzf8ph26frstffxyjszv3pump": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:14xcxpaglaut8vatngyueybd5krpvdunxdq2xgz7t2cs": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x99d763e6a1ac48a487ab70d6f0abd22e2fc43db2": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xfb71b7500eac7ffcb600ba481ff07fc4f0064a1f": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x13aa83522d592a3f8299071c43e2157f243a7777": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x567e07375e4af56f17bf36ab8bec20f095b36232": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xaddeec5272865ab83c8ab48467c20b8873ad7777": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x5f220bdadf03d86cdca89687f8a6941ce1e0f35c": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xa1d18ca4527b368b25cc0b397993b18bbf684d0c": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x823d390e9eac8af968416fe4752f7e5eb1cceb81": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x2fcd537d043afd077f4f8f246153b5f22fabe89f": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xbc3101ae36eb0e3704b7d738aa61777a9c8a28eb": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x5e1fd9f6448fa5c6d2f56f725b62fc38644fc670": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x75215340a953087c4db2b55711d91dcfbc927777": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x9cb62c3c5a46950e929d00c6969285972b0b9c03": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x9fd67b1dfb344371cdf86be1d6e9b08bb4e308dd": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x151008b96fb032d6bda5cd6cc444510b29acd02e": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x441de3703793f925827b3dbb829256133ace8a23": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x832e385463d9dfb956df1920db65631819435446": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x840e97697f828b34ce43df8c9c40d0ff8d448bc0": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xcdc1968ec218a3a405d994672829f8b3f54b3872": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xd11866074a9ffa6d2aabd60d2e81a06f5df07777": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x4df07c4979ad3fef0a47f6c8a40646c69ba103c7": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x55054989a260347fa93e616bc632ad99b0227f35": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x96685c4b00182a317dff27843fd09d48ab647777": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xf098aabdd8d221810584fb986169ed02b7f407de": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xbec9f6d108f03fce48ab46004e7b6429b1e342f9": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xea72c2b4c687c43bfc5d4d4a99e097d51088fc9a": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x527a0b3ccda8ea56ecd9130457b991a2c0e97777": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0xe7cab60353912b8a98c644803771829593d5abac": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "bsc:0x2203061bcb97cb417492f09d9058c88a9bedd662": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:exizlan54xvxpy1flh8yxtpbhpawm7uztcmfjjh5pump": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:4un1kfw4bjm9fwvcpn3hc5agxywvgn2tenk2m4nj8bbv": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:28gq3mg66rgta47jvvukvdfhkxgryj7rrf4zonhipump": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:7f5xamqc5egtfjze9eymipa5qsnziwua6zl1m1ktpump": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:31ypp3wwkm9qfnzqmgwja4ggcsewmtazdfv2bbjfpump": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:28gep4gcnvhptwzbkhnwkaw5mqw9qsdc5n5m7h79pump": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:aygubsxytkuspkf9vwgqcugdgvpjj4n2eagdresbpump": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:9py2x8zdydhbvtbedt35duyy6ezwfxhyov9r5uazpump": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:8cbch51pzizkvd1k9m9qy24cqfkmnsiprrjt14xnqtzt": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
-    "solana:clcfahnbehlhpmkhtore2mcmrzqssmrqdt5lgakgu2se": {
-      "first_seen": "2026-11-28T01:59:52.358709+00:00",
-      "alerted": false
-    },
     "solana:9tkbd3vfamsxseaicd9jvqwpwwaoli4fsgwmzl2cpump": {
       "first_seen": "2026-11-28T01:59:52.358709+00:00",
       "alerted": false
@@ -770,14 +530,6 @@
       "alerted": false
     },
     "solana:3e3fkdgvxrtt9zp6kvm8ivomcayattuh1uw73c5znf4b": {
-      "first_seen": "2026-11-28T02:52:46.717233+00:00",
-      "alerted": false
-    },
-    "solana:bpzjyljzyfzayqiqstgycuj1gcpy2zy5jndg5lgwvsgn": {
-      "first_seen": "2026-11-28T02:52:46.717233+00:00",
-      "alerted": false
-    },
-    "solana:636vir9uxvvm2lgs3qrfqcgypx2fg4ljzkbqnob4mcq2": {
       "first_seen": "2026-11-28T02:52:46.717233+00:00",
       "alerted": false
     },
@@ -862,10 +614,6 @@
       "alerted": false
     },
     "bsc:0x4c9bb7dbdbcdb314cbcabb030d868fd19658ec5b": {
-      "first_seen": "2026-11-28T02:52:46.717233+00:00",
-      "alerted": false
-    },
-    "bsc:0xc8e673eda78a18a269e52b6b95305419a65f7777": {
       "first_seen": "2026-11-28T02:52:46.717233+00:00",
       "alerted": false
     },
@@ -1935,6 +1683,238 @@
     },
     "solana:j25axttx91eg3mne6p2bp4qyvu7yydeefmryw3utpump": {
       "first_seen": "2026-11-28T09:19:01.702055+00:00",
+      "alerted": false
+    },
+    "solana:3spuqace2ttftsr5kn9snh9j1vqjrtw6yniej32mjh3x": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:7hdb2cicu2ems3q4crqus8p6eesk81i1qevrujjaz3en": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:3b71uijunk5ivrcaebrorb4a8y3qerdahmcotx28gxs6": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:4nqlj8afxw3ttwnrstxrvqzbdh5u9etaqc5f2baypump": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:hsnc4xk8qjdwl6w8ks8r7b36pthubb83oujpbsqmnbdq": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:gn9a2aezawu5nwrwwsem8g2hhnpkta6mb1lgdfwnomh": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:ch2pavlovuddwkztk9php6qzpxb8n37rnuvbphk25fik": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:723k1zg1qyrrvi3f2l5zqpmuacejdgoen7ryh4a42gk9": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:bkijzan4gbccsppbqgp8aqdgkytrgyizethc3sbrd9bk": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:aq9mjai4fugtfw4rv9mdoor7pnqyu5smicas7bdhitf5": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:5bipcbzyts4nnzgon9ogtskxx1cc4n3lfifzuhrspump": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:eyfdpek4t4uocgxq2tbvsqe61ekecnl3wkag2rmovfea": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x05d4106ab2c663506e5a1407a207aa09b15f961a": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x8ed3c724aebb3c042e1f798448c756b243d67777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x7e536445055581c2e9e5eebd21c32523cfc97777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xb72f4d9f954565c5d70673fa4f955fcc19067777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x6047819d245f00113a82dd63fc39e7d1b7ee4444": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x38a7fb16e565bf93d0561098079cf2d4a6637777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xda067c8c436a8887c5c1b2413e08aea9a2597777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x258180637c2517d99c17f127c169090dc42f1177": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x3194e80ab4429407c3cd57e3d3ff2b477bf07777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x21bbf58f24ae322a30f584765c14e88dba537777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xdc697dafa352e580b866b1a45cd76e3a756e7777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x965f833580cf0aaf00922da563f1ed1f760b7777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x5cb1b44a9225f707eaa610e3edaaf313fabb4444": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x31446b09ebf2333397efa23c34bbff7012764444": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xda80551f9dffbded8acc37716fc85d2687907777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x496f6572d4cf52367bb9d81193166f72d46dffff": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x2008799c88d640a016510c0b0f8588a6c40dae11": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x08fb23ec64f813f55cebd8e504865bc5311c4444": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xa28d2a1bdbb46acdee23f063f4cc655a328f7777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x0e1ae07a8f1b22a5e9b067b40aa546d62321ffff": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x25f06e386fd5c99ee21e9db4d08d2bfea6527777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x8609efff184f0853e0ae00682007c9f564ba4444": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x5843843f93a6dd722caf3e77addc5cd6d2eb7777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xc44cf2084913b32f80dcd9c99bef62de92cdffff": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xcdd25273114137328bedf7735cd64d6ecf367777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x29bbafa8103265da5a1833694709022f867f7777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xc9d2b81f7b7dfa3eb891cdc47b239e82a04e7777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xeb617755d0dd2ee9f5458ec6fc7b8d9f2cdb7777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xd2c97c0d6923af1d777a88a3001fbbdc6d87e035": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xe82220fd88f9854a16a9a40d9b185174547fffff": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xd2e76afab9df1d0ce80c449e824d461da31b7777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x6f7f14882ab3e7ffa5601e4a0b1f64221450f37e": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xcdd323fcaa8876eaf3502f6e8b9f55be6fe87777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x9c813fc0e78f2979de32b370a87f0a2eb026ffff": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xd644f07a7f1a075c0f0345a32479e867dfa97777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xa1a19dff3e7748de823a035a341f5ec683147777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x4dab889cd6bf621735b28395012206b19277224b": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x14a28ba8712713d297e7a0afcb48883056e85e01": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x2bc30205667d5653eade3a7f6c62fac5214b2bd3": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0xacb7c4f8c65758bddd6c1e5cb7c70de9706d5eb4": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x5c45526895fb2fd2846c7f4c2aa09c17c73f525b": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "bsc:0x4c70ff101f85a6735162d41f642394f80c7f7777": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:4newt1r5fgeockdf9xbgir6b43iacmnvar2d4wt8pump": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:2n5ttb5uxkabfxyrxdejtdpwfh5zfk7orcnldml5pump": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:fvi5fxepruymkgu5jsy5waspgcr3sy1p6jzkz3z9pump": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
+      "alerted": false
+    },
+    "solana:a6bbhdxcnfmplqczezdoz2wvplvcr6jcxfn7oeempump": {
+      "first_seen": "2026-11-28T10:20:19.842713+00:00",
       "alerted": false
     }
   },
